@@ -1,0 +1,20 @@
+iso/
+extracted/
+generated/
+build/
+extern/
+database/
+build-*/
+cmake-build-*/
+CMakeUserPresets.json
+.cache/
+moderngekko-user/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# scratch build/run scripts and logs
+*.log
+*.pid
+scratch_*.bat
