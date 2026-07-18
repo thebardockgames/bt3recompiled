@@ -148,6 +148,7 @@ framebuffer readback, not just "no errors logged")
 | 3a/3b | Extended capture to multiple real draw calls merged into one scene fragment; began real (paletted) texture capture |
 | 3c | Fixed the actual root cause of Phase 3's corner-pinning bug (same `cpixelcenter` issue, confirmed via pixel evidence: correctly-centered, properly-scaled geometry) |
 | 4 | Resolved a real GX **C8 + TLUT (palette)** texture from live TMEM — genuinely decoded, not synthetic (happened to be a low-contrast menu/UI texture, not vivid combat art) |
+| 5/5b | Raised merged draw-call capture from 16 to 300, added a capture-start delay to skip past the boot/menu flow — **did not fix Phase 4's texture problem**: even a real, interactively-played combat capture still landed on the same flat, near-black UI/background tile mosaic, not character art. See `HANDOFF.md` for the current best theory and next fix to try. |
 
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
@@ -179,10 +180,14 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 
 ### What's next
 
-- Real texture capture during actual combat (current capture only got a
-  UI/menu-ish texture)
-- Rendering more than one merged draw-call cluster as an actual assembled
-  scene, and eventually a full frame
+- **Fix the capture bias toward background/UI content** (the main open
+  problem right now — see `HANDOFF.md` for the full analysis and the
+  specific fix being tried next: skipping draws with suspiciously uniform
+  vertex colors, since that's the one pattern shared by every "flat texture"
+  capture so far)
+- Once real character/effect art is actually captured: a real camera/
+  projection setup, since the current bounding-box NDC normalization only
+  works for near-planar/UI-style geometry
 - Reimplementing more TEV combiner stages as real HLSL rather than relying
   on Dolphin's shadergen for every state
 - Eventually retiring the Dolphin GX/VideoCommon dependency entirely once

@@ -9,7 +9,38 @@ Last updated: 2026-07-17, end of a single long session that took this
 project from "nothing" to a verified native-D3D12 rendering proof-of-concept.
 Branch: `native-render-pipeline` (root + `lib/ModernGekko` + its nested
 `lib/ModernGekko/vendor/dolphin`, all three on that branch, all three have
-their own independent commit history — see "Repo topology" below).
+their own independent commit history — see "Repo topology" below). `main`
+is currently identical to `native-render-pipeline` (fast-forwarded together
+each time) — there is no actual divergence yet, they're just two names for
+the same history so far.
+
+## Cloning this on a new machine
+
+This is now a real, private GitHub project, not just a local folder:
+
+```
+git clone --recurse-submodules https://github.com/thebardockgames/bt3recompiled.git
+```
+
+If you already cloned without `--recurse-submodules`, run
+`git submodule update --init --recursive` afterward. Remotes:
+
+| Repo | `origin` (push here) | `upstream` (pull updates from) |
+|---|---|---|
+| root (`bt3recompiled`) | `thebardockgames/bt3recompiled` (private) | — (this is the user's own project) |
+| `lib/DolRecomp` | `thebardockgames/DolRecomp` (fork) | `ExpansionPak/DolRecomp` |
+| `lib/ModernGekko` | `thebardockgames/ModernGekko` (fork) | `ExpansionPak/ModernGekko` |
+| `lib/ModernGekko/vendor/dolphin` | `thebardockgames/RecompCore` (fork) | `ExpansionPak/RecompCore` |
+
+**After every commit in a submodule, `git push origin native-render-pipeline`
+in that submodule's own directory, THEN commit+push the submodule-pointer
+bump one level up** (see "Repo topology" below for the exact commit-order
+pattern) — don't just commit locally and forget to push; this project is
+actively synced to GitHub now so the user can switch machines mid-session.
+You do NOT have the user's `gh` CLI auth on a fresh machine automatically —
+check `gh auth status` (full path may be needed, e.g.
+`"C:\Program Files\GitHub CLI\gh.exe" auth status` if `gh` isn't on `PATH`
+yet after a fresh install) before assuming you can push/fork/create repos.
 
 ## Repo topology — READ THIS FIRST
 
@@ -283,21 +314,54 @@ phase summary. Technical detail an implementer needs:
 
 ## What's NOT done yet / next steps
 
-1. **Real combat texture capture.** The one real C8+TLUT texture actually
-   resolved (Phase 4) came from an automated ~60s headless capture and
-   happened to be near-black/low-alpha — almost certainly a UI/menu element,
-   not character/effect art. To get something visually interesting, repeat
-   what worked in Phase 2b: have a human actually play a real combat with
-   `MODERNGEKKO_GX_VERTEX_DUMP` set (interactive windowed session, not
-   automated headless), then re-run the texture-resolution capture against
-   that session.
-2. **More than a handful of merged draw calls.** Currently 16 draws get
-   merged into one scene fragment (a "UI tile mosaic" per Phase 3's
-   description) using one shared bounding box. Rendering toward an actual
-   full assembled frame needs a real camera/projection setup (current code
-   explicitly avoids building one — everything is normalized via bounding
-   box, which only works for near-planar/UI-style geometry, not real 3D
-   character meshes with actual depth).
+**Honest status as of end of session (2026-07-17 evening):** the pipeline
+infrastructure genuinely works end-to-end and is verified with real pixel
+evidence — real shader, real geometry decode, real matrix/clip-space fixes,
+real TLUT/palette resolution all confirmed correct. But the actual VISUAL
+result is still not exciting: every capture attempt so far, including a
+deliberate interactive combat session, has landed on a full-screen UI/
+background tile mosaic with a flat, near-black, low-alpha texture — not
+character or effect art. This is a real, unresolved limitation, not a
+disguised failure; read #1 below before trying to "just capture again",
+since a plain re-capture will very likely reproduce the same result.
+
+1. **Capture strategy is structurally biased toward background/UI content,
+   not characters — this is the main open problem.** `GxVertexDumpDevice`
+   records the first N qualifying draw calls it sees (N=300 as of Phase 5)
+   after an optional startup delay (`MODERNGEKKO_GX_VERTEX_DUMP_SKIP_SECONDS`,
+   added in Phase 5b specifically to skip past the boot/menu flow). Delaying
+   capture start did NOT help: even starting well into a real, human-played
+   combat, all 300 captured draws turned out to be a 128×224-tiled
+   full-screen quad mosaic (36 unique vertices, flat vertex colors
+   `0x80808080`/`0xffffffff`) with the exact same near-black/low-alpha
+   texture as Phase 4's very first (boot/menu) capture. The likely
+   explanation: whatever this mosaic is (background layer, screen-space
+   effect, or a persistent HUD/vignette element) gets drawn FIRST in every
+   single frame's display-list order, regardless of what's happening
+   elsewhere in the game — so "capture the first N draws of a frame,
+   whenever you start capturing" will keep landing on it no matter how long
+   you wait to start. **Next concrete fix to try**: don't stop at the first
+   N draws — either (a) capture a much larger window (e.g. skip the first
+   ~50-100 draws of a frame before recording, on the theory that background/
+   UI layers render before characters/effects within a frame too, not just
+   across frames), or (b) capture many distinct textures across a session
+   (not just the first one bound) and pick the one with the highest color
+   variance/entropy as "probably real art" instead of "probably a flat
+   overlay", or (c) add a heuristic to skip draws whose vertex colors are
+   uniformly `0x80808080`/`0xffffffff` (both observed only on this
+   background mosaic so far) since real character shading likely varies
+   per-vertex. Try (c) first — it's the cheapest change and directly targets
+   the specific pattern observed twice now.
+2. **More than a few hundred merged draw calls, and a real camera/projection.**
+   Even with 300 draws (up from 16 in Phase 2b/3), everything captured so
+   far is still near-planar/UI-style geometry, so the bounding-box NDC
+   normalization in `LoadRealGeometry()` (`native_render_window.cpp`) has
+   never actually been tested against real 3D character meshes with depth.
+   Once #1 is fixed and real character geometry gets captured, expect this
+   normalization approach to need real work (it explicitly has no camera/
+   view/projection matrix system — everything is flattened to fit a
+   [-1,1]-ish NDC box via min/max, which will look wrong/distorted for
+   anything with real depth variation).
 3. **TEV combiner coverage beyond what's been captured.** Only the specific
    TEV/BP state captured in the reference combat session has been proven to
    shader-gen and render correctly. Phase 0's capture showed 500+ distinct
