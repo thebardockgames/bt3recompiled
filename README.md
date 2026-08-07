@@ -148,7 +148,11 @@ framebuffer readback, not just "no errors logged")
 | 3a/3b | Extended capture to multiple real draw calls merged into one scene fragment; began real (paletted) texture capture |
 | 3c | Fixed the actual root cause of Phase 3's corner-pinning bug (same `cpixelcenter` issue, confirmed via pixel evidence: correctly-centered, properly-scaled geometry) |
 | 4 | Resolved a real GX **C8 + TLUT (palette)** texture from live TMEM — genuinely decoded, not synthetic (happened to be a low-contrast menu/UI texture, not vivid combat art) |
-| 5/5b | Raised merged draw-call capture from 16 to 300, added a capture-start delay to skip past the boot/menu flow — **did not fix Phase 4's texture problem**: even a real, interactively-played combat capture still landed on the same flat, near-black UI/background tile mosaic, not character art. See `HANDOFF.md` for the current best theory and next fix to try. |
+| 5/5b | Raised merged draw-call capture from 16 to 300, added a capture-start delay to skip past the boot/menu flow — did not by itself fix the background/UI bias (see next row) |
+| 6/6b/6c | Fixed it: filter out draws with uniform (RGB-only) vertex color, throttle the capture's RAM-refresh so it no longer visibly slows the game, broaden the filter to catch animated-alpha variants of the same flat overlay |
+| 7/7b | Scan texture units 0-3 per draw instead of hardcoding unit 0, reject only fully-transparent decodes (a flat but *opaque* texture modulated by vertex color is normal, valid UI rendering, not something to discard) |
+
+**Result:** a real interactive combat capture now renders **recognizable, structured UI shapes** (a HUD icon and a bar-plus-label, likely a health/ki bar and name tag) instead of a single undifferentiated rectangle — see `phase7b_frame0_readback.png`. Currently flat white (the captured texture is white; per-vertex color variation is captured but not yet visibly coming through in render) — the next visual milestone is color, then actual character geometry (everything captured so far still reads as HUD/UI, not a 3D character mesh).
 
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
@@ -180,11 +184,9 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 
 ### What's next
 
-- **Fix the capture bias toward background/UI content** (the main open
-  problem right now — see `HANDOFF.md` for the full analysis and the
-  specific fix being tried next: skipping draws with suspiciously uniform
-  vertex colors, since that's the one pattern shared by every "flat texture"
-  capture so far)
+- Get visible color (not just shape) rendering through — captured vertex
+  colors do vary, this may just need another capture/render round
+- Try to land on actual 3D character geometry instead of HUD/UI content
 - Once real character/effect art is actually captured: a real camera/
   projection setup, since the current bounding-box NDC normalization only
   works for near-planar/UI-style geometry

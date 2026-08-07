@@ -5,8 +5,10 @@ technical brain-dump of state, gotchas, and next steps — not user-facing
 documentation (see `README.md` for that). Read this fully before touching
 anything; several of the gotchas below cost real time to rediscover once.
 
-Last updated: 2026-07-17, end of a single long session that took this
-project from "nothing" to a verified native-D3D12 rendering proof-of-concept.
+Last updated: 2026-08-07 (Phases 6-7b: fixed the background/UI capture bias,
+now rendering real recognizable UI shapes). Originally written 2026-07-17,
+end of a single long session that took this project from "nothing" to a
+verified native-D3D12 rendering proof-of-concept.
 Branch: `native-render-pipeline` (root + `lib/ModernGekko` + its nested
 `lib/ModernGekko/vendor/dolphin`, all three on that branch, all three have
 their own independent commit history — see "Repo topology" below). `main`
@@ -314,60 +316,64 @@ phase summary. Technical detail an implementer needs:
 
 ## What's NOT done yet / next steps
 
-**Honest status as of end of session (2026-07-17 evening):** the pipeline
-infrastructure genuinely works end-to-end and is verified with real pixel
-evidence — real shader, real geometry decode, real matrix/clip-space fixes,
-real TLUT/palette resolution all confirmed correct. But the actual VISUAL
-result is still not exciting: every capture attempt so far, including a
-deliberate interactive combat session, has landed on a full-screen UI/
-background tile mosaic with a flat, near-black, low-alpha texture — not
-character or effect art. This is a real, unresolved limitation, not a
-disguised failure; read #1 below before trying to "just capture again",
-since a plain re-capture will very likely reproduce the same result.
+**Honest status as of 2026-08-07 (Phases 6/6b/6c/7/7b landed):** the
+background/UI-tile-mosaic problem from the original write-up below (Phases
+0-5b) is now substantially resolved. `GxVertexDumpDevice` filters out draws
+whose vertex colors are uniform (RGB-only comparison, ignoring alpha —
+Phase 6/6c), throttles its RAM-snapshot refresh so capture no longer
+visibly slows the game during a full play session (Phase 6b), and scans
+texture units 0-3 per draw instead of hardcoding unit 0, rejecting only
+fully-transparent (not merely flat-but-opaque) decodes (Phase 7/7b — an
+opaque flat texture modulated by real per-vertex color is a normal, valid
+UI technique and was being wrongly discarded in Phase 7's first cut).
 
-1. **Capture strategy is structurally biased toward background/UI content,
-   not characters — this is the main open problem.** `GxVertexDumpDevice`
-   records the first N qualifying draw calls it sees (N=300 as of Phase 5)
-   after an optional startup delay (`MODERNGEKKO_GX_VERTEX_DUMP_SKIP_SECONDS`,
-   added in Phase 5b specifically to skip past the boot/menu flow). Delaying
-   capture start did NOT help: even starting well into a real, human-played
-   combat, all 300 captured draws turned out to be a 128×224-tiled
-   full-screen quad mosaic (36 unique vertices, flat vertex colors
-   `0x80808080`/`0xffffffff`) with the exact same near-black/low-alpha
-   texture as Phase 4's very first (boot/menu) capture. The likely
-   explanation: whatever this mosaic is (background layer, screen-space
-   effect, or a persistent HUD/vignette element) gets drawn FIRST in every
-   single frame's display-list order, regardless of what's happening
-   elsewhere in the game — so "capture the first N draws of a frame,
-   whenever you start capturing" will keep landing on it no matter how long
-   you wait to start. **Next concrete fix to try**: don't stop at the first
-   N draws — either (a) capture a much larger window (e.g. skip the first
-   ~50-100 draws of a frame before recording, on the theory that background/
-   UI layers render before characters/effects within a frame too, not just
-   across frames), or (b) capture many distinct textures across a session
-   (not just the first one bound) and pick the one with the highest color
-   variance/entropy as "probably real art" instead of "probably a flat
-   overlay", or (c) add a heuristic to skip draws whose vertex colors are
-   uniformly `0x80808080`/`0xffffffff` (both observed only on this
-   background mosaic so far) since real character shading likely varies
-   per-vertex. Try (c) first — it's the cheapest change and directly targets
-   the specific pattern observed twice now.
-2. **More than a few hundred merged draw calls, and a real camera/projection.**
+**Result, visually confirmed via framebuffer readback:** a real interactive
+combat capture with all of the above active produced 1200 real vertices, a
+real 4×4 opaque-white texture, and — for the first time — **structured,
+recognizable UI shapes** (a cross/diamond icon shape and what looks like a
+bar-plus-label, consistent with a health/ki bar and name tag) instead of a
+single undifferentiated rectangle or a blank frame. Saved as
+`phase7b_frame0_readback.png` at the project root. Everything currently
+renders flat white (the captured texture is white and this particular
+frame's combined vertex/texture color happened to stay white), not yet
+colorful character art — that's the next visual milestone, not a bug to
+fix.
+
+**Next steps, in likely priority order:**
+
+1. **Get color, not just shape.** Now that real distinct UI geometry
+   renders, the next win is seeing actual color variation (the captured
+   vertex data DOES vary in RGB — Phase 6c's investigation found real
+   gradients — so this may already work with a different capture, or the
+   render/blend setup may need adjustment to actually show per-vertex color
+   instead of flattening to white). Try a few more capture+render rounds
+   before assuming a real bug.
+2. **Try to land on actual character geometry, not just HUD/UI.** Every
+   real capture so far (including this one) still looks HUD/UI-shaped
+   (screen-space quads, bar/icon silhouettes) rather than a 3D character
+   mesh. The RGB-uniform filter targets flat-shaded backgrounds specifically
+   and doesn't bias toward or against HUD vs. character content otherwise —
+   getting a character mesh may need capturing many more candidate draws
+   per session (raise `m_max_draws` further) and inspecting which ones have
+   3D-looking (non-axis-aligned, actual-depth) positions vs. screen-space
+   quads, or capturing during a specific moment (e.g. a special attack
+   cutscene) where character geometry is more prominent in the draw order.
+3. **More than a few hundred merged draw calls, and a real camera/projection.**
    Even with 300 draws (up from 16 in Phase 2b/3), everything captured so
    far is still near-planar/UI-style geometry, so the bounding-box NDC
    normalization in `LoadRealGeometry()` (`native_render_window.cpp`) has
    never actually been tested against real 3D character meshes with depth.
-   Once #1 is fixed and real character geometry gets captured, expect this
-   normalization approach to need real work (it explicitly has no camera/
-   view/projection matrix system — everything is flattened to fit a
-   [-1,1]-ish NDC box via min/max, which will look wrong/distorted for
-   anything with real depth variation).
-3. **TEV combiner coverage beyond what's been captured.** Only the specific
+   Once real character geometry gets captured, expect this normalization
+   approach to need real work (it explicitly has no camera/view/projection
+   matrix system — everything is flattened to fit a [-1,1]-ish NDC box via
+   min/max, which will look wrong/distorted for anything with real depth
+   variation).
+4. **TEV combiner coverage beyond what's been captured.** Only the specific
    TEV/BP state captured in the reference combat session has been proven to
    shader-gen and render correctly. Phase 0's capture showed 500+ distinct
    TEV_COLOR_RA states across a real combat — most haven't been individually
    verified through the full pipeline yet.
-4. **Eventually**: retire the Dolphin GX/VideoCommon dependency for
+5. **Eventually**: retire the Dolphin GX/VideoCommon dependency for
    real-game rendering (not just this standalone probe) once feature parity
    is reached — that's the actual "no more GPU emulation" milestone the
    whole effort is aimed at. Currently the real, playable game still renders
