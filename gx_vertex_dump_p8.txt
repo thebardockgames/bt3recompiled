@@ -1,0 +1,3901 @@
+# ModernGekko real decoded draw dump (Phase 2b/3b/8 native-renderer scoping)
+=== draw 0 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=376,148,0 uv0=40,60 color0=0xffffffff
+v pos=397,148,0 uv0=57,60 color0=0xffffffff
+v pos=397,166,0 uv0=57,78 color0=0xffffffff
+v pos=376,166,0 uv0=40,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 1 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=377,150,0 uv0=40,60 color0=0xffffffff
+v pos=398,150,0 uv0=57,60 color0=0xffffffff
+v pos=398,168,0 uv0=57,78 color0=0xffffffff
+v pos=377,168,0 uv0=40,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 2 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=377,146,0 uv0=40,60 color0=0xffffffff
+v pos=398,146,0 uv0=57,60 color0=0xffffffff
+v pos=398,164,0 uv0=57,78 color0=0xffffffff
+v pos=377,164,0 uv0=40,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 3 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=377,148,0 uv0=40,60 color0=0xffffffff
+v pos=398,148,0 uv0=57,60 color0=0xffffffff
+v pos=398,166,0 uv0=57,78 color0=0xffffffff
+v pos=377,166,0 uv0=40,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 4 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=399,150,0 uv0=80,60 color0=0xffffffff
+v pos=412,150,0 uv0=91,60 color0=0xffffffff
+v pos=412,168,0 uv0=91,78 color0=0xffffffff
+v pos=399,168,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 5 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=397,150,0 uv0=80,60 color0=0xffffffff
+v pos=410,150,0 uv0=91,60 color0=0xffffffff
+v pos=410,168,0 uv0=91,78 color0=0xffffffff
+v pos=397,168,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 6 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=399,146,0 uv0=80,60 color0=0xffffffff
+v pos=412,146,0 uv0=91,60 color0=0xffffffff
+v pos=412,164,0 uv0=91,78 color0=0xffffffff
+v pos=399,164,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 7 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=397,146,0 uv0=80,60 color0=0xffffffff
+v pos=410,146,0 uv0=91,60 color0=0xffffffff
+v pos=410,164,0 uv0=91,78 color0=0xffffffff
+v pos=397,164,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 8 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=399,148,0 uv0=80,60 color0=0xffffffff
+v pos=412,148,0 uv0=91,60 color0=0xffffffff
+v pos=412,166,0 uv0=91,78 color0=0xffffffff
+v pos=399,166,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 9 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=397,148,0 uv0=80,60 color0=0xffffffff
+v pos=410,148,0 uv0=91,60 color0=0xffffffff
+v pos=410,166,0 uv0=91,78 color0=0xffffffff
+v pos=397,166,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 10 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=398,150,0 uv0=80,60 color0=0xffffffff
+v pos=411,150,0 uv0=91,60 color0=0xffffffff
+v pos=411,168,0 uv0=91,78 color0=0xffffffff
+v pos=398,168,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 11 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=398,146,0 uv0=80,60 color0=0xffffffff
+v pos=411,146,0 uv0=91,60 color0=0xffffffff
+v pos=411,164,0 uv0=91,78 color0=0xffffffff
+v pos=398,164,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 12 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=398,148,0 uv0=80,60 color0=0xffffffff
+v pos=411,148,0 uv0=91,60 color0=0xffffffff
+v pos=411,166,0 uv0=91,78 color0=0xffffffff
+v pos=398,166,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 13 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=412,150,0 uv0=140,60 color0=0xffffffff
+v pos=423,150,0 uv0=149,60 color0=0xffffffff
+v pos=423,168,0 uv0=149,78 color0=0xffffffff
+v pos=412,168,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 14 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=410,150,0 uv0=140,60 color0=0xffffffff
+v pos=421,150,0 uv0=149,60 color0=0xffffffff
+v pos=421,168,0 uv0=149,78 color0=0xffffffff
+v pos=410,168,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 15 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=412,146,0 uv0=140,60 color0=0xffffffff
+v pos=423,146,0 uv0=149,60 color0=0xffffffff
+v pos=423,164,0 uv0=149,78 color0=0xffffffff
+v pos=412,164,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 16 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=410,146,0 uv0=140,60 color0=0xffffffff
+v pos=421,146,0 uv0=149,60 color0=0xffffffff
+v pos=421,164,0 uv0=149,78 color0=0xffffffff
+v pos=410,164,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 17 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=412,148,0 uv0=140,60 color0=0xffffffff
+v pos=423,148,0 uv0=149,60 color0=0xffffffff
+v pos=423,166,0 uv0=149,78 color0=0xffffffff
+v pos=412,166,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 18 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=410,148,0 uv0=140,60 color0=0xffffffff
+v pos=421,148,0 uv0=149,60 color0=0xffffffff
+v pos=421,166,0 uv0=149,78 color0=0xffffffff
+v pos=410,166,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 19 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=411,150,0 uv0=140,60 color0=0xffffffff
+v pos=422,150,0 uv0=149,60 color0=0xffffffff
+v pos=422,168,0 uv0=149,78 color0=0xffffffff
+v pos=411,168,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 20 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=411,146,0 uv0=140,60 color0=0xffffffff
+v pos=422,146,0 uv0=149,60 color0=0xffffffff
+v pos=422,164,0 uv0=149,78 color0=0xffffffff
+v pos=411,164,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 21 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=411,148,0 uv0=140,60 color0=0xffffffff
+v pos=422,148,0 uv0=149,60 color0=0xffffffff
+v pos=422,166,0 uv0=149,78 color0=0xffffffff
+v pos=411,166,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 22 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=423,150,0 uv0=280,60 color0=0xffffffff
+v pos=436,150,0 uv0=291,60 color0=0xffffffff
+v pos=436,169,0 uv0=291,79 color0=0xffffffff
+v pos=423,169,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 23 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=421,150,0 uv0=280,60 color0=0xffffffff
+v pos=434,150,0 uv0=291,60 color0=0xffffffff
+v pos=434,169,0 uv0=291,79 color0=0xffffffff
+v pos=421,169,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 24 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=423,146,0 uv0=280,60 color0=0xffffffff
+v pos=436,146,0 uv0=291,60 color0=0xffffffff
+v pos=436,165,0 uv0=291,79 color0=0xffffffff
+v pos=423,165,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 25 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=421,146,0 uv0=280,60 color0=0xffffffff
+v pos=434,146,0 uv0=291,60 color0=0xffffffff
+v pos=434,165,0 uv0=291,79 color0=0xffffffff
+v pos=421,165,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 26 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=423,148,0 uv0=280,60 color0=0xffffffff
+v pos=436,148,0 uv0=291,60 color0=0xffffffff
+v pos=436,167,0 uv0=291,79 color0=0xffffffff
+v pos=423,167,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 27 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=421,148,0 uv0=280,60 color0=0xffffffff
+v pos=434,148,0 uv0=291,60 color0=0xffffffff
+v pos=434,167,0 uv0=291,79 color0=0xffffffff
+v pos=421,167,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 28 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=422,150,0 uv0=280,60 color0=0xffffffff
+v pos=435,150,0 uv0=291,60 color0=0xffffffff
+v pos=435,169,0 uv0=291,79 color0=0xffffffff
+v pos=422,169,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 29 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=422,146,0 uv0=280,60 color0=0xffffffff
+v pos=435,146,0 uv0=291,60 color0=0xffffffff
+v pos=435,165,0 uv0=291,79 color0=0xffffffff
+v pos=422,165,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 30 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=422,148,0 uv0=280,60 color0=0xffffffff
+v pos=435,148,0 uv0=291,60 color0=0xffffffff
+v pos=435,167,0 uv0=291,79 color0=0xffffffff
+v pos=422,167,0 uv0=280,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 31 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=201,198,0 uv0=380,20 color0=0xffffffff
+v pos=212,198,0 uv0=389,20 color0=0xffffffff
+v pos=212,216,0 uv0=389,38 color0=0xffffffff
+v pos=201,216,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 32 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=199,198,0 uv0=380,20 color0=0xffffffff
+v pos=210,198,0 uv0=389,20 color0=0xffffffff
+v pos=210,216,0 uv0=389,38 color0=0xffffffff
+v pos=199,216,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 33 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=201,194,0 uv0=380,20 color0=0xffffffff
+v pos=212,194,0 uv0=389,20 color0=0xffffffff
+v pos=212,212,0 uv0=389,38 color0=0xffffffff
+v pos=201,212,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 34 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=199,194,0 uv0=380,20 color0=0xffffffff
+v pos=210,194,0 uv0=389,20 color0=0xffffffff
+v pos=210,212,0 uv0=389,38 color0=0xffffffff
+v pos=199,212,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 35 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=201,196,0 uv0=380,20 color0=0xffffffff
+v pos=212,196,0 uv0=389,20 color0=0xffffffff
+v pos=212,214,0 uv0=389,38 color0=0xffffffff
+v pos=201,214,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 36 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=199,196,0 uv0=380,20 color0=0xffffffff
+v pos=210,196,0 uv0=389,20 color0=0xffffffff
+v pos=210,214,0 uv0=389,38 color0=0xffffffff
+v pos=199,214,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 37 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=200,198,0 uv0=380,20 color0=0xffffffff
+v pos=211,198,0 uv0=389,20 color0=0xffffffff
+v pos=211,216,0 uv0=389,38 color0=0xffffffff
+v pos=200,216,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 38 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=200,194,0 uv0=380,20 color0=0xffffffff
+v pos=211,194,0 uv0=389,20 color0=0xffffffff
+v pos=211,212,0 uv0=389,38 color0=0xffffffff
+v pos=200,212,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 39 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=200,196,0 uv0=380,20 color0=0xffffffff
+v pos=211,196,0 uv0=389,20 color0=0xffffffff
+v pos=211,214,0 uv0=389,38 color0=0xffffffff
+v pos=200,214,0 uv0=380,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 40 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=212,198,0 uv0=80,60 color0=0xffffffff
+v pos=225,198,0 uv0=91,60 color0=0xffffffff
+v pos=225,216,0 uv0=91,78 color0=0xffffffff
+v pos=212,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 41 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=210,198,0 uv0=80,60 color0=0xffffffff
+v pos=223,198,0 uv0=91,60 color0=0xffffffff
+v pos=223,216,0 uv0=91,78 color0=0xffffffff
+v pos=210,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 42 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=212,194,0 uv0=80,60 color0=0xffffffff
+v pos=225,194,0 uv0=91,60 color0=0xffffffff
+v pos=225,212,0 uv0=91,78 color0=0xffffffff
+v pos=212,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 43 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=210,194,0 uv0=80,60 color0=0xffffffff
+v pos=223,194,0 uv0=91,60 color0=0xffffffff
+v pos=223,212,0 uv0=91,78 color0=0xffffffff
+v pos=210,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 44 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=212,196,0 uv0=80,60 color0=0xffffffff
+v pos=225,196,0 uv0=91,60 color0=0xffffffff
+v pos=225,214,0 uv0=91,78 color0=0xffffffff
+v pos=212,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 45 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=210,196,0 uv0=80,60 color0=0xffffffff
+v pos=223,196,0 uv0=91,60 color0=0xffffffff
+v pos=223,214,0 uv0=91,78 color0=0xffffffff
+v pos=210,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 46 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=211,198,0 uv0=80,60 color0=0xffffffff
+v pos=224,198,0 uv0=91,60 color0=0xffffffff
+v pos=224,216,0 uv0=91,78 color0=0xffffffff
+v pos=211,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 47 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=211,194,0 uv0=80,60 color0=0xffffffff
+v pos=224,194,0 uv0=91,60 color0=0xffffffff
+v pos=224,212,0 uv0=91,78 color0=0xffffffff
+v pos=211,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 48 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=211,196,0 uv0=80,60 color0=0xffffffff
+v pos=224,196,0 uv0=91,60 color0=0xffffffff
+v pos=224,214,0 uv0=91,78 color0=0xffffffff
+v pos=211,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 49 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=225,198,0 uv0=300,40 color0=0xffffffff
+v pos=238,198,0 uv0=311,40 color0=0xffffffff
+v pos=238,216,0 uv0=311,58 color0=0xffffffff
+v pos=225,216,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 50 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=223,198,0 uv0=300,40 color0=0xffffffff
+v pos=236,198,0 uv0=311,40 color0=0xffffffff
+v pos=236,216,0 uv0=311,58 color0=0xffffffff
+v pos=223,216,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 51 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=225,194,0 uv0=300,40 color0=0xffffffff
+v pos=238,194,0 uv0=311,40 color0=0xffffffff
+v pos=238,212,0 uv0=311,58 color0=0xffffffff
+v pos=225,212,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 52 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=223,194,0 uv0=300,40 color0=0xffffffff
+v pos=236,194,0 uv0=311,40 color0=0xffffffff
+v pos=236,212,0 uv0=311,58 color0=0xffffffff
+v pos=223,212,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 53 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=225,196,0 uv0=300,40 color0=0xffffffff
+v pos=238,196,0 uv0=311,40 color0=0xffffffff
+v pos=238,214,0 uv0=311,58 color0=0xffffffff
+v pos=225,214,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 54 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=223,196,0 uv0=300,40 color0=0xffffffff
+v pos=236,196,0 uv0=311,40 color0=0xffffffff
+v pos=236,214,0 uv0=311,58 color0=0xffffffff
+v pos=223,214,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 55 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=224,198,0 uv0=300,40 color0=0xffffffff
+v pos=237,198,0 uv0=311,40 color0=0xffffffff
+v pos=237,216,0 uv0=311,58 color0=0xffffffff
+v pos=224,216,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 56 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=224,194,0 uv0=300,40 color0=0xffffffff
+v pos=237,194,0 uv0=311,40 color0=0xffffffff
+v pos=237,212,0 uv0=311,58 color0=0xffffffff
+v pos=224,212,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 57 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=224,196,0 uv0=300,40 color0=0xffffffff
+v pos=237,196,0 uv0=311,40 color0=0xffffffff
+v pos=237,214,0 uv0=311,58 color0=0xffffffff
+v pos=224,214,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 58 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=238,198,0 uv0=360,40 color0=0xffffffff
+v pos=251,198,0 uv0=371,40 color0=0xffffffff
+v pos=251,216,0 uv0=371,58 color0=0xffffffff
+v pos=238,216,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 59 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=236,198,0 uv0=360,40 color0=0xffffffff
+v pos=249,198,0 uv0=371,40 color0=0xffffffff
+v pos=249,216,0 uv0=371,58 color0=0xffffffff
+v pos=236,216,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 60 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=238,194,0 uv0=360,40 color0=0xffffffff
+v pos=251,194,0 uv0=371,40 color0=0xffffffff
+v pos=251,212,0 uv0=371,58 color0=0xffffffff
+v pos=238,212,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 61 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=236,194,0 uv0=360,40 color0=0xffffffff
+v pos=249,194,0 uv0=371,40 color0=0xffffffff
+v pos=249,212,0 uv0=371,58 color0=0xffffffff
+v pos=236,212,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 62 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=238,196,0 uv0=360,40 color0=0xffffffff
+v pos=251,196,0 uv0=371,40 color0=0xffffffff
+v pos=251,214,0 uv0=371,58 color0=0xffffffff
+v pos=238,214,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 63 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=236,196,0 uv0=360,40 color0=0xffffffff
+v pos=249,196,0 uv0=371,40 color0=0xffffffff
+v pos=249,214,0 uv0=371,58 color0=0xffffffff
+v pos=236,214,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 64 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=237,198,0 uv0=360,40 color0=0xffffffff
+v pos=250,198,0 uv0=371,40 color0=0xffffffff
+v pos=250,216,0 uv0=371,58 color0=0xffffffff
+v pos=237,216,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 65 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=237,194,0 uv0=360,40 color0=0xffffffff
+v pos=250,194,0 uv0=371,40 color0=0xffffffff
+v pos=250,212,0 uv0=371,58 color0=0xffffffff
+v pos=237,212,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 66 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=237,196,0 uv0=360,40 color0=0xffffffff
+v pos=250,196,0 uv0=371,40 color0=0xffffffff
+v pos=250,214,0 uv0=371,58 color0=0xffffffff
+v pos=237,214,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 67 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=251,198,0 uv0=460,40 color0=0xffffffff
+v pos=257,198,0 uv0=465,40 color0=0xffffffff
+v pos=257,216,0 uv0=465,58 color0=0xffffffff
+v pos=251,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 68 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=249,198,0 uv0=460,40 color0=0xffffffff
+v pos=255,198,0 uv0=465,40 color0=0xffffffff
+v pos=255,216,0 uv0=465,58 color0=0xffffffff
+v pos=249,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 69 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=251,194,0 uv0=460,40 color0=0xffffffff
+v pos=257,194,0 uv0=465,40 color0=0xffffffff
+v pos=257,212,0 uv0=465,58 color0=0xffffffff
+v pos=251,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 70 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=249,194,0 uv0=460,40 color0=0xffffffff
+v pos=255,194,0 uv0=465,40 color0=0xffffffff
+v pos=255,212,0 uv0=465,58 color0=0xffffffff
+v pos=249,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 71 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=251,196,0 uv0=460,40 color0=0xffffffff
+v pos=257,196,0 uv0=465,40 color0=0xffffffff
+v pos=257,214,0 uv0=465,58 color0=0xffffffff
+v pos=251,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 72 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=249,196,0 uv0=460,40 color0=0xffffffff
+v pos=255,196,0 uv0=465,40 color0=0xffffffff
+v pos=255,214,0 uv0=465,58 color0=0xffffffff
+v pos=249,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 73 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=250,198,0 uv0=460,40 color0=0xffffffff
+v pos=256,198,0 uv0=465,40 color0=0xffffffff
+v pos=256,216,0 uv0=465,58 color0=0xffffffff
+v pos=250,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 74 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=250,194,0 uv0=460,40 color0=0xffffffff
+v pos=256,194,0 uv0=465,40 color0=0xffffffff
+v pos=256,212,0 uv0=465,58 color0=0xffffffff
+v pos=250,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 75 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=250,196,0 uv0=460,40 color0=0xffffffff
+v pos=256,196,0 uv0=465,40 color0=0xffffffff
+v pos=256,214,0 uv0=465,58 color0=0xffffffff
+v pos=250,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 76 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=257,198,0 uv0=60,60 color0=0xffffffff
+v pos=270,198,0 uv0=71,60 color0=0xffffffff
+v pos=270,216,0 uv0=71,78 color0=0xffffffff
+v pos=257,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 77 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=255,198,0 uv0=60,60 color0=0xffffffff
+v pos=268,198,0 uv0=71,60 color0=0xffffffff
+v pos=268,216,0 uv0=71,78 color0=0xffffffff
+v pos=255,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 78 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=257,194,0 uv0=60,60 color0=0xffffffff
+v pos=270,194,0 uv0=71,60 color0=0xffffffff
+v pos=270,212,0 uv0=71,78 color0=0xffffffff
+v pos=257,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 79 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=255,194,0 uv0=60,60 color0=0xffffffff
+v pos=268,194,0 uv0=71,60 color0=0xffffffff
+v pos=268,212,0 uv0=71,78 color0=0xffffffff
+v pos=255,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 80 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=257,196,0 uv0=60,60 color0=0xffffffff
+v pos=270,196,0 uv0=71,60 color0=0xffffffff
+v pos=270,214,0 uv0=71,78 color0=0xffffffff
+v pos=257,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 81 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=255,196,0 uv0=60,60 color0=0xffffffff
+v pos=268,196,0 uv0=71,60 color0=0xffffffff
+v pos=268,214,0 uv0=71,78 color0=0xffffffff
+v pos=255,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 82 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=256,198,0 uv0=60,60 color0=0xffffffff
+v pos=269,198,0 uv0=71,60 color0=0xffffffff
+v pos=269,216,0 uv0=71,78 color0=0xffffffff
+v pos=256,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 83 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=256,194,0 uv0=60,60 color0=0xffffffff
+v pos=269,194,0 uv0=71,60 color0=0xffffffff
+v pos=269,212,0 uv0=71,78 color0=0xffffffff
+v pos=256,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 84 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=256,196,0 uv0=60,60 color0=0xffffffff
+v pos=269,196,0 uv0=71,60 color0=0xffffffff
+v pos=269,214,0 uv0=71,78 color0=0xffffffff
+v pos=256,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 85 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=270,198,0 uv0=420,40 color0=0xffffffff
+v pos=283,198,0 uv0=431,40 color0=0xffffffff
+v pos=283,217,0 uv0=431,59 color0=0xffffffff
+v pos=270,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 86 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=268,198,0 uv0=420,40 color0=0xffffffff
+v pos=281,198,0 uv0=431,40 color0=0xffffffff
+v pos=281,217,0 uv0=431,59 color0=0xffffffff
+v pos=268,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 87 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=270,194,0 uv0=420,40 color0=0xffffffff
+v pos=283,194,0 uv0=431,40 color0=0xffffffff
+v pos=283,213,0 uv0=431,59 color0=0xffffffff
+v pos=270,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 88 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=268,194,0 uv0=420,40 color0=0xffffffff
+v pos=281,194,0 uv0=431,40 color0=0xffffffff
+v pos=281,213,0 uv0=431,59 color0=0xffffffff
+v pos=268,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 89 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=270,196,0 uv0=420,40 color0=0xffffffff
+v pos=283,196,0 uv0=431,40 color0=0xffffffff
+v pos=283,215,0 uv0=431,59 color0=0xffffffff
+v pos=270,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 90 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=268,196,0 uv0=420,40 color0=0xffffffff
+v pos=281,196,0 uv0=431,40 color0=0xffffffff
+v pos=281,215,0 uv0=431,59 color0=0xffffffff
+v pos=268,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 91 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=269,198,0 uv0=420,40 color0=0xffffffff
+v pos=282,198,0 uv0=431,40 color0=0xffffffff
+v pos=282,217,0 uv0=431,59 color0=0xffffffff
+v pos=269,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 92 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=269,194,0 uv0=420,40 color0=0xffffffff
+v pos=282,194,0 uv0=431,40 color0=0xffffffff
+v pos=282,213,0 uv0=431,59 color0=0xffffffff
+v pos=269,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 93 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=269,196,0 uv0=420,40 color0=0xffffffff
+v pos=282,196,0 uv0=431,40 color0=0xffffffff
+v pos=282,215,0 uv0=431,59 color0=0xffffffff
+v pos=269,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 94 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=283,198,0 uv0=0,0 color0=0xffffffff
+v pos=294,198,0 uv0=9,0 color0=0xffffffff
+v pos=294,218,0 uv0=9,20 color0=0xffffffff
+v pos=283,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 95 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=281,198,0 uv0=0,0 color0=0xffffffff
+v pos=292,198,0 uv0=9,0 color0=0xffffffff
+v pos=292,218,0 uv0=9,20 color0=0xffffffff
+v pos=281,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 96 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=283,194,0 uv0=0,0 color0=0xffffffff
+v pos=294,194,0 uv0=9,0 color0=0xffffffff
+v pos=294,214,0 uv0=9,20 color0=0xffffffff
+v pos=283,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 97 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=281,194,0 uv0=0,0 color0=0xffffffff
+v pos=292,194,0 uv0=9,0 color0=0xffffffff
+v pos=292,214,0 uv0=9,20 color0=0xffffffff
+v pos=281,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 98 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=283,196,0 uv0=0,0 color0=0xffffffff
+v pos=294,196,0 uv0=9,0 color0=0xffffffff
+v pos=294,216,0 uv0=9,20 color0=0xffffffff
+v pos=283,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 99 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=281,196,0 uv0=0,0 color0=0xffffffff
+v pos=292,196,0 uv0=9,0 color0=0xffffffff
+v pos=292,216,0 uv0=9,20 color0=0xffffffff
+v pos=281,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 100 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=282,198,0 uv0=0,0 color0=0xffffffff
+v pos=293,198,0 uv0=9,0 color0=0xffffffff
+v pos=293,218,0 uv0=9,20 color0=0xffffffff
+v pos=282,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 101 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=282,194,0 uv0=0,0 color0=0xffffffff
+v pos=293,194,0 uv0=9,0 color0=0xffffffff
+v pos=293,214,0 uv0=9,20 color0=0xffffffff
+v pos=282,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 102 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=282,196,0 uv0=0,0 color0=0xffffffff
+v pos=293,196,0 uv0=9,0 color0=0xffffffff
+v pos=293,216,0 uv0=9,20 color0=0xffffffff
+v pos=282,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 103 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=294,198,0 uv0=460,40 color0=0xffffffff
+v pos=300,198,0 uv0=465,40 color0=0xffffffff
+v pos=300,216,0 uv0=465,58 color0=0xffffffff
+v pos=294,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 104 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=292,198,0 uv0=460,40 color0=0xffffffff
+v pos=298,198,0 uv0=465,40 color0=0xffffffff
+v pos=298,216,0 uv0=465,58 color0=0xffffffff
+v pos=292,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 105 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=294,194,0 uv0=460,40 color0=0xffffffff
+v pos=300,194,0 uv0=465,40 color0=0xffffffff
+v pos=300,212,0 uv0=465,58 color0=0xffffffff
+v pos=294,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 106 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=292,194,0 uv0=460,40 color0=0xffffffff
+v pos=298,194,0 uv0=465,40 color0=0xffffffff
+v pos=298,212,0 uv0=465,58 color0=0xffffffff
+v pos=292,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 107 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=294,196,0 uv0=460,40 color0=0xffffffff
+v pos=300,196,0 uv0=465,40 color0=0xffffffff
+v pos=300,214,0 uv0=465,58 color0=0xffffffff
+v pos=294,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 108 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=292,196,0 uv0=460,40 color0=0xffffffff
+v pos=298,196,0 uv0=465,40 color0=0xffffffff
+v pos=298,214,0 uv0=465,58 color0=0xffffffff
+v pos=292,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 109 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=293,198,0 uv0=460,40 color0=0xffffffff
+v pos=299,198,0 uv0=465,40 color0=0xffffffff
+v pos=299,216,0 uv0=465,58 color0=0xffffffff
+v pos=293,216,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 110 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=293,194,0 uv0=460,40 color0=0xffffffff
+v pos=299,194,0 uv0=465,40 color0=0xffffffff
+v pos=299,212,0 uv0=465,58 color0=0xffffffff
+v pos=293,212,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 111 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=293,196,0 uv0=460,40 color0=0xffffffff
+v pos=299,196,0 uv0=465,40 color0=0xffffffff
+v pos=299,214,0 uv0=465,58 color0=0xffffffff
+v pos=293,214,0 uv0=460,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 112 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=300,198,0 uv0=60,60 color0=0xffffffff
+v pos=313,198,0 uv0=71,60 color0=0xffffffff
+v pos=313,216,0 uv0=71,78 color0=0xffffffff
+v pos=300,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 113 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=298,198,0 uv0=60,60 color0=0xffffffff
+v pos=311,198,0 uv0=71,60 color0=0xffffffff
+v pos=311,216,0 uv0=71,78 color0=0xffffffff
+v pos=298,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 114 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=300,194,0 uv0=60,60 color0=0xffffffff
+v pos=313,194,0 uv0=71,60 color0=0xffffffff
+v pos=313,212,0 uv0=71,78 color0=0xffffffff
+v pos=300,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 115 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=298,194,0 uv0=60,60 color0=0xffffffff
+v pos=311,194,0 uv0=71,60 color0=0xffffffff
+v pos=311,212,0 uv0=71,78 color0=0xffffffff
+v pos=298,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 116 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=300,196,0 uv0=60,60 color0=0xffffffff
+v pos=313,196,0 uv0=71,60 color0=0xffffffff
+v pos=313,214,0 uv0=71,78 color0=0xffffffff
+v pos=300,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 117 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=298,196,0 uv0=60,60 color0=0xffffffff
+v pos=311,196,0 uv0=71,60 color0=0xffffffff
+v pos=311,214,0 uv0=71,78 color0=0xffffffff
+v pos=298,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 118 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=299,198,0 uv0=60,60 color0=0xffffffff
+v pos=312,198,0 uv0=71,60 color0=0xffffffff
+v pos=312,216,0 uv0=71,78 color0=0xffffffff
+v pos=299,216,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 119 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=299,194,0 uv0=60,60 color0=0xffffffff
+v pos=312,194,0 uv0=71,60 color0=0xffffffff
+v pos=312,212,0 uv0=71,78 color0=0xffffffff
+v pos=299,212,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 120 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=299,196,0 uv0=60,60 color0=0xffffffff
+v pos=312,196,0 uv0=71,60 color0=0xffffffff
+v pos=312,214,0 uv0=71,78 color0=0xffffffff
+v pos=299,214,0 uv0=60,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 121 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=313,198,0 uv0=0,0 color0=0xffffffff
+v pos=324,198,0 uv0=9,0 color0=0xffffffff
+v pos=324,218,0 uv0=9,20 color0=0xffffffff
+v pos=313,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 122 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=311,198,0 uv0=0,0 color0=0xffffffff
+v pos=322,198,0 uv0=9,0 color0=0xffffffff
+v pos=322,218,0 uv0=9,20 color0=0xffffffff
+v pos=311,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 123 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=313,194,0 uv0=0,0 color0=0xffffffff
+v pos=324,194,0 uv0=9,0 color0=0xffffffff
+v pos=324,214,0 uv0=9,20 color0=0xffffffff
+v pos=313,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 124 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=311,194,0 uv0=0,0 color0=0xffffffff
+v pos=322,194,0 uv0=9,0 color0=0xffffffff
+v pos=322,214,0 uv0=9,20 color0=0xffffffff
+v pos=311,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 125 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=313,196,0 uv0=0,0 color0=0xffffffff
+v pos=324,196,0 uv0=9,0 color0=0xffffffff
+v pos=324,216,0 uv0=9,20 color0=0xffffffff
+v pos=313,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 126 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=311,196,0 uv0=0,0 color0=0xffffffff
+v pos=322,196,0 uv0=9,0 color0=0xffffffff
+v pos=322,216,0 uv0=9,20 color0=0xffffffff
+v pos=311,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 127 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=312,198,0 uv0=0,0 color0=0xffffffff
+v pos=323,198,0 uv0=9,0 color0=0xffffffff
+v pos=323,218,0 uv0=9,20 color0=0xffffffff
+v pos=312,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 128 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=312,194,0 uv0=0,0 color0=0xffffffff
+v pos=323,194,0 uv0=9,0 color0=0xffffffff
+v pos=323,214,0 uv0=9,20 color0=0xffffffff
+v pos=312,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 129 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=312,196,0 uv0=0,0 color0=0xffffffff
+v pos=323,196,0 uv0=9,0 color0=0xffffffff
+v pos=323,216,0 uv0=9,20 color0=0xffffffff
+v pos=312,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 130 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=324,198,0 uv0=100,60 color0=0xffffffff
+v pos=337,198,0 uv0=111,60 color0=0xffffffff
+v pos=337,217,0 uv0=111,79 color0=0xffffffff
+v pos=324,217,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 131 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=322,198,0 uv0=100,60 color0=0xffffffff
+v pos=335,198,0 uv0=111,60 color0=0xffffffff
+v pos=335,217,0 uv0=111,79 color0=0xffffffff
+v pos=322,217,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 132 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=324,194,0 uv0=100,60 color0=0xffffffff
+v pos=337,194,0 uv0=111,60 color0=0xffffffff
+v pos=337,213,0 uv0=111,79 color0=0xffffffff
+v pos=324,213,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 133 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=322,194,0 uv0=100,60 color0=0xffffffff
+v pos=335,194,0 uv0=111,60 color0=0xffffffff
+v pos=335,213,0 uv0=111,79 color0=0xffffffff
+v pos=322,213,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 134 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=324,196,0 uv0=100,60 color0=0xffffffff
+v pos=337,196,0 uv0=111,60 color0=0xffffffff
+v pos=337,215,0 uv0=111,79 color0=0xffffffff
+v pos=324,215,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 135 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=322,196,0 uv0=100,60 color0=0xffffffff
+v pos=335,196,0 uv0=111,60 color0=0xffffffff
+v pos=335,215,0 uv0=111,79 color0=0xffffffff
+v pos=322,215,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 136 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=323,198,0 uv0=100,60 color0=0xffffffff
+v pos=336,198,0 uv0=111,60 color0=0xffffffff
+v pos=336,217,0 uv0=111,79 color0=0xffffffff
+v pos=323,217,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 137 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=323,194,0 uv0=100,60 color0=0xffffffff
+v pos=336,194,0 uv0=111,60 color0=0xffffffff
+v pos=336,213,0 uv0=111,79 color0=0xffffffff
+v pos=323,213,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 138 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=323,196,0 uv0=100,60 color0=0xffffffff
+v pos=336,196,0 uv0=111,60 color0=0xffffffff
+v pos=336,215,0 uv0=111,79 color0=0xffffffff
+v pos=323,215,0 uv0=100,79 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 139 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=337,198,0 uv0=140,60 color0=0xffffffff
+v pos=348,198,0 uv0=149,60 color0=0xffffffff
+v pos=348,216,0 uv0=149,78 color0=0xffffffff
+v pos=337,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 140 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=335,198,0 uv0=140,60 color0=0xffffffff
+v pos=346,198,0 uv0=149,60 color0=0xffffffff
+v pos=346,216,0 uv0=149,78 color0=0xffffffff
+v pos=335,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 141 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=337,194,0 uv0=140,60 color0=0xffffffff
+v pos=348,194,0 uv0=149,60 color0=0xffffffff
+v pos=348,212,0 uv0=149,78 color0=0xffffffff
+v pos=337,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 142 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=335,194,0 uv0=140,60 color0=0xffffffff
+v pos=346,194,0 uv0=149,60 color0=0xffffffff
+v pos=346,212,0 uv0=149,78 color0=0xffffffff
+v pos=335,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 143 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=337,196,0 uv0=140,60 color0=0xffffffff
+v pos=348,196,0 uv0=149,60 color0=0xffffffff
+v pos=348,214,0 uv0=149,78 color0=0xffffffff
+v pos=337,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 144 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=335,196,0 uv0=140,60 color0=0xffffffff
+v pos=346,196,0 uv0=149,60 color0=0xffffffff
+v pos=346,214,0 uv0=149,78 color0=0xffffffff
+v pos=335,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 145 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=336,198,0 uv0=140,60 color0=0xffffffff
+v pos=347,198,0 uv0=149,60 color0=0xffffffff
+v pos=347,216,0 uv0=149,78 color0=0xffffffff
+v pos=336,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 146 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=336,194,0 uv0=140,60 color0=0xffffffff
+v pos=347,194,0 uv0=149,60 color0=0xffffffff
+v pos=347,212,0 uv0=149,78 color0=0xffffffff
+v pos=336,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 147 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=336,196,0 uv0=140,60 color0=0xffffffff
+v pos=347,196,0 uv0=149,60 color0=0xffffffff
+v pos=347,214,0 uv0=149,78 color0=0xffffffff
+v pos=336,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 148 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=348,198,0 uv0=80,60 color0=0xffffffff
+v pos=361,198,0 uv0=91,60 color0=0xffffffff
+v pos=361,216,0 uv0=91,78 color0=0xffffffff
+v pos=348,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 149 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=346,198,0 uv0=80,60 color0=0xffffffff
+v pos=359,198,0 uv0=91,60 color0=0xffffffff
+v pos=359,216,0 uv0=91,78 color0=0xffffffff
+v pos=346,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 150 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=348,194,0 uv0=80,60 color0=0xffffffff
+v pos=361,194,0 uv0=91,60 color0=0xffffffff
+v pos=361,212,0 uv0=91,78 color0=0xffffffff
+v pos=348,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 151 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=346,194,0 uv0=80,60 color0=0xffffffff
+v pos=359,194,0 uv0=91,60 color0=0xffffffff
+v pos=359,212,0 uv0=91,78 color0=0xffffffff
+v pos=346,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 152 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=348,196,0 uv0=80,60 color0=0xffffffff
+v pos=361,196,0 uv0=91,60 color0=0xffffffff
+v pos=361,214,0 uv0=91,78 color0=0xffffffff
+v pos=348,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 153 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=346,196,0 uv0=80,60 color0=0xffffffff
+v pos=359,196,0 uv0=91,60 color0=0xffffffff
+v pos=359,214,0 uv0=91,78 color0=0xffffffff
+v pos=346,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 154 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=347,198,0 uv0=80,60 color0=0xffffffff
+v pos=360,198,0 uv0=91,60 color0=0xffffffff
+v pos=360,216,0 uv0=91,78 color0=0xffffffff
+v pos=347,216,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 155 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=347,194,0 uv0=80,60 color0=0xffffffff
+v pos=360,194,0 uv0=91,60 color0=0xffffffff
+v pos=360,212,0 uv0=91,78 color0=0xffffffff
+v pos=347,212,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 156 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=347,196,0 uv0=80,60 color0=0xffffffff
+v pos=360,196,0 uv0=91,60 color0=0xffffffff
+v pos=360,214,0 uv0=91,78 color0=0xffffffff
+v pos=347,214,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 157 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=361,198,0 uv0=420,40 color0=0xffffffff
+v pos=374,198,0 uv0=431,40 color0=0xffffffff
+v pos=374,217,0 uv0=431,59 color0=0xffffffff
+v pos=361,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 158 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=359,198,0 uv0=420,40 color0=0xffffffff
+v pos=372,198,0 uv0=431,40 color0=0xffffffff
+v pos=372,217,0 uv0=431,59 color0=0xffffffff
+v pos=359,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 159 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=361,194,0 uv0=420,40 color0=0xffffffff
+v pos=374,194,0 uv0=431,40 color0=0xffffffff
+v pos=374,213,0 uv0=431,59 color0=0xffffffff
+v pos=361,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 160 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=359,194,0 uv0=420,40 color0=0xffffffff
+v pos=372,194,0 uv0=431,40 color0=0xffffffff
+v pos=372,213,0 uv0=431,59 color0=0xffffffff
+v pos=359,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 161 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=361,196,0 uv0=420,40 color0=0xffffffff
+v pos=374,196,0 uv0=431,40 color0=0xffffffff
+v pos=374,215,0 uv0=431,59 color0=0xffffffff
+v pos=361,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 162 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=359,196,0 uv0=420,40 color0=0xffffffff
+v pos=372,196,0 uv0=431,40 color0=0xffffffff
+v pos=372,215,0 uv0=431,59 color0=0xffffffff
+v pos=359,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 163 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=360,198,0 uv0=420,40 color0=0xffffffff
+v pos=373,198,0 uv0=431,40 color0=0xffffffff
+v pos=373,217,0 uv0=431,59 color0=0xffffffff
+v pos=360,217,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 164 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=360,194,0 uv0=420,40 color0=0xffffffff
+v pos=373,194,0 uv0=431,40 color0=0xffffffff
+v pos=373,213,0 uv0=431,59 color0=0xffffffff
+v pos=360,213,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 165 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=360,196,0 uv0=420,40 color0=0xffffffff
+v pos=373,196,0 uv0=431,40 color0=0xffffffff
+v pos=373,215,0 uv0=431,59 color0=0xffffffff
+v pos=360,215,0 uv0=420,59 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 166 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=374,198,0 uv0=140,60 color0=0xffffffff
+v pos=385,198,0 uv0=149,60 color0=0xffffffff
+v pos=385,216,0 uv0=149,78 color0=0xffffffff
+v pos=374,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 167 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=372,198,0 uv0=140,60 color0=0xffffffff
+v pos=383,198,0 uv0=149,60 color0=0xffffffff
+v pos=383,216,0 uv0=149,78 color0=0xffffffff
+v pos=372,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 168 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=374,194,0 uv0=140,60 color0=0xffffffff
+v pos=385,194,0 uv0=149,60 color0=0xffffffff
+v pos=385,212,0 uv0=149,78 color0=0xffffffff
+v pos=374,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 169 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=372,194,0 uv0=140,60 color0=0xffffffff
+v pos=383,194,0 uv0=149,60 color0=0xffffffff
+v pos=383,212,0 uv0=149,78 color0=0xffffffff
+v pos=372,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 170 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=374,196,0 uv0=140,60 color0=0xffffffff
+v pos=385,196,0 uv0=149,60 color0=0xffffffff
+v pos=385,214,0 uv0=149,78 color0=0xffffffff
+v pos=374,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 171 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=372,196,0 uv0=140,60 color0=0xffffffff
+v pos=383,196,0 uv0=149,60 color0=0xffffffff
+v pos=383,214,0 uv0=149,78 color0=0xffffffff
+v pos=372,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 172 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=373,198,0 uv0=140,60 color0=0xffffffff
+v pos=384,198,0 uv0=149,60 color0=0xffffffff
+v pos=384,216,0 uv0=149,78 color0=0xffffffff
+v pos=373,216,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 173 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=373,194,0 uv0=140,60 color0=0xffffffff
+v pos=384,194,0 uv0=149,60 color0=0xffffffff
+v pos=384,212,0 uv0=149,78 color0=0xffffffff
+v pos=373,212,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 174 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=373,196,0 uv0=140,60 color0=0xffffffff
+v pos=384,196,0 uv0=149,60 color0=0xffffffff
+v pos=384,214,0 uv0=149,78 color0=0xffffffff
+v pos=373,214,0 uv0=140,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 175 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=385,198,0 uv0=380,40 color0=0xffffffff
+v pos=398,198,0 uv0=391,40 color0=0xffffffff
+v pos=398,216,0 uv0=391,58 color0=0xffffffff
+v pos=385,216,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 176 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=383,198,0 uv0=380,40 color0=0xffffffff
+v pos=396,198,0 uv0=391,40 color0=0xffffffff
+v pos=396,216,0 uv0=391,58 color0=0xffffffff
+v pos=383,216,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 177 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=385,194,0 uv0=380,40 color0=0xffffffff
+v pos=398,194,0 uv0=391,40 color0=0xffffffff
+v pos=398,212,0 uv0=391,58 color0=0xffffffff
+v pos=385,212,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 178 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=383,194,0 uv0=380,40 color0=0xffffffff
+v pos=396,194,0 uv0=391,40 color0=0xffffffff
+v pos=396,212,0 uv0=391,58 color0=0xffffffff
+v pos=383,212,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 179 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=385,196,0 uv0=380,40 color0=0xffffffff
+v pos=398,196,0 uv0=391,40 color0=0xffffffff
+v pos=398,214,0 uv0=391,58 color0=0xffffffff
+v pos=385,214,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 180 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=383,196,0 uv0=380,40 color0=0xffffffff
+v pos=396,196,0 uv0=391,40 color0=0xffffffff
+v pos=396,214,0 uv0=391,58 color0=0xffffffff
+v pos=383,214,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 181 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=384,198,0 uv0=380,40 color0=0xffffffff
+v pos=397,198,0 uv0=391,40 color0=0xffffffff
+v pos=397,216,0 uv0=391,58 color0=0xffffffff
+v pos=384,216,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 182 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=384,194,0 uv0=380,40 color0=0xffffffff
+v pos=397,194,0 uv0=391,40 color0=0xffffffff
+v pos=397,212,0 uv0=391,58 color0=0xffffffff
+v pos=384,212,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 183 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=384,196,0 uv0=380,40 color0=0xffffffff
+v pos=397,196,0 uv0=391,40 color0=0xffffffff
+v pos=397,214,0 uv0=391,58 color0=0xffffffff
+v pos=384,214,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 184 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=398,198,0 uv0=160,60 color0=0xffffffff
+v pos=411,198,0 uv0=171,60 color0=0xffffffff
+v pos=411,216,0 uv0=171,78 color0=0xffffffff
+v pos=398,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 185 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=396,198,0 uv0=160,60 color0=0xffffffff
+v pos=409,198,0 uv0=171,60 color0=0xffffffff
+v pos=409,216,0 uv0=171,78 color0=0xffffffff
+v pos=396,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 186 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=398,194,0 uv0=160,60 color0=0xffffffff
+v pos=411,194,0 uv0=171,60 color0=0xffffffff
+v pos=411,212,0 uv0=171,78 color0=0xffffffff
+v pos=398,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 187 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=396,194,0 uv0=160,60 color0=0xffffffff
+v pos=409,194,0 uv0=171,60 color0=0xffffffff
+v pos=409,212,0 uv0=171,78 color0=0xffffffff
+v pos=396,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 188 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=398,196,0 uv0=160,60 color0=0xffffffff
+v pos=411,196,0 uv0=171,60 color0=0xffffffff
+v pos=411,214,0 uv0=171,78 color0=0xffffffff
+v pos=398,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 189 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=396,196,0 uv0=160,60 color0=0xffffffff
+v pos=409,196,0 uv0=171,60 color0=0xffffffff
+v pos=409,214,0 uv0=171,78 color0=0xffffffff
+v pos=396,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 190 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=397,198,0 uv0=160,60 color0=0xffffffff
+v pos=410,198,0 uv0=171,60 color0=0xffffffff
+v pos=410,216,0 uv0=171,78 color0=0xffffffff
+v pos=397,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 191 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=397,194,0 uv0=160,60 color0=0xffffffff
+v pos=410,194,0 uv0=171,60 color0=0xffffffff
+v pos=410,212,0 uv0=171,78 color0=0xffffffff
+v pos=397,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 192 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=397,196,0 uv0=160,60 color0=0xffffffff
+v pos=410,196,0 uv0=171,60 color0=0xffffffff
+v pos=410,214,0 uv0=171,78 color0=0xffffffff
+v pos=397,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 193 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=411,198,0 uv0=160,60 color0=0xffffffff
+v pos=424,198,0 uv0=171,60 color0=0xffffffff
+v pos=424,216,0 uv0=171,78 color0=0xffffffff
+v pos=411,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 194 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=409,198,0 uv0=160,60 color0=0xffffffff
+v pos=422,198,0 uv0=171,60 color0=0xffffffff
+v pos=422,216,0 uv0=171,78 color0=0xffffffff
+v pos=409,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 195 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=411,194,0 uv0=160,60 color0=0xffffffff
+v pos=424,194,0 uv0=171,60 color0=0xffffffff
+v pos=424,212,0 uv0=171,78 color0=0xffffffff
+v pos=411,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 196 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=409,194,0 uv0=160,60 color0=0xffffffff
+v pos=422,194,0 uv0=171,60 color0=0xffffffff
+v pos=422,212,0 uv0=171,78 color0=0xffffffff
+v pos=409,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 197 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=411,196,0 uv0=160,60 color0=0xffffffff
+v pos=424,196,0 uv0=171,60 color0=0xffffffff
+v pos=424,214,0 uv0=171,78 color0=0xffffffff
+v pos=411,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 198 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=409,196,0 uv0=160,60 color0=0xffffffff
+v pos=422,196,0 uv0=171,60 color0=0xffffffff
+v pos=422,214,0 uv0=171,78 color0=0xffffffff
+v pos=409,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 199 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=410,198,0 uv0=160,60 color0=0xffffffff
+v pos=423,198,0 uv0=171,60 color0=0xffffffff
+v pos=423,216,0 uv0=171,78 color0=0xffffffff
+v pos=410,216,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 200 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=410,194,0 uv0=160,60 color0=0xffffffff
+v pos=423,194,0 uv0=171,60 color0=0xffffffff
+v pos=423,212,0 uv0=171,78 color0=0xffffffff
+v pos=410,212,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 201 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=410,196,0 uv0=160,60 color0=0xffffffff
+v pos=423,196,0 uv0=171,60 color0=0xffffffff
+v pos=423,214,0 uv0=171,78 color0=0xffffffff
+v pos=410,214,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 202 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=424,198,0 uv0=280,0 color0=0xffffffff
+v pos=430,198,0 uv0=285,0 color0=0xffffffff
+v pos=430,215,0 uv0=285,17 color0=0xffffffff
+v pos=424,215,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 203 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=422,198,0 uv0=280,0 color0=0xffffffff
+v pos=428,198,0 uv0=285,0 color0=0xffffffff
+v pos=428,215,0 uv0=285,17 color0=0xffffffff
+v pos=422,215,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 204 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=424,194,0 uv0=280,0 color0=0xffffffff
+v pos=430,194,0 uv0=285,0 color0=0xffffffff
+v pos=430,211,0 uv0=285,17 color0=0xffffffff
+v pos=424,211,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 205 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=422,194,0 uv0=280,0 color0=0xffffffff
+v pos=428,194,0 uv0=285,0 color0=0xffffffff
+v pos=428,211,0 uv0=285,17 color0=0xffffffff
+v pos=422,211,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 206 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=424,196,0 uv0=280,0 color0=0xffffffff
+v pos=430,196,0 uv0=285,0 color0=0xffffffff
+v pos=430,213,0 uv0=285,17 color0=0xffffffff
+v pos=424,213,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 207 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=422,196,0 uv0=280,0 color0=0xffffffff
+v pos=428,196,0 uv0=285,0 color0=0xffffffff
+v pos=428,213,0 uv0=285,17 color0=0xffffffff
+v pos=422,213,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 208 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=423,198,0 uv0=280,0 color0=0xffffffff
+v pos=429,198,0 uv0=285,0 color0=0xffffffff
+v pos=429,215,0 uv0=285,17 color0=0xffffffff
+v pos=423,215,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 209 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=423,194,0 uv0=280,0 color0=0xffffffff
+v pos=429,194,0 uv0=285,0 color0=0xffffffff
+v pos=429,211,0 uv0=285,17 color0=0xffffffff
+v pos=423,211,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 210 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=423,196,0 uv0=280,0 color0=0xffffffff
+v pos=429,196,0 uv0=285,0 color0=0xffffffff
+v pos=429,213,0 uv0=285,17 color0=0xffffffff
+v pos=423,213,0 uv0=280,17 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 211 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=430,198,0 uv0=0,0 color0=0xffffffff
+v pos=441,198,0 uv0=9,0 color0=0xffffffff
+v pos=441,218,0 uv0=9,20 color0=0xffffffff
+v pos=430,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 212 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=428,198,0 uv0=0,0 color0=0xffffffff
+v pos=439,198,0 uv0=9,0 color0=0xffffffff
+v pos=439,218,0 uv0=9,20 color0=0xffffffff
+v pos=428,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 213 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=430,194,0 uv0=0,0 color0=0xffffffff
+v pos=441,194,0 uv0=9,0 color0=0xffffffff
+v pos=441,214,0 uv0=9,20 color0=0xffffffff
+v pos=430,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 214 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=428,194,0 uv0=0,0 color0=0xffffffff
+v pos=439,194,0 uv0=9,0 color0=0xffffffff
+v pos=439,214,0 uv0=9,20 color0=0xffffffff
+v pos=428,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 215 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=430,196,0 uv0=0,0 color0=0xffffffff
+v pos=441,196,0 uv0=9,0 color0=0xffffffff
+v pos=441,216,0 uv0=9,20 color0=0xffffffff
+v pos=430,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 216 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=428,196,0 uv0=0,0 color0=0xffffffff
+v pos=439,196,0 uv0=9,0 color0=0xffffffff
+v pos=439,216,0 uv0=9,20 color0=0xffffffff
+v pos=428,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 217 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=429,198,0 uv0=0,0 color0=0xffffffff
+v pos=440,198,0 uv0=9,0 color0=0xffffffff
+v pos=440,218,0 uv0=9,20 color0=0xffffffff
+v pos=429,218,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 218 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=429,194,0 uv0=0,0 color0=0xffffffff
+v pos=440,194,0 uv0=9,0 color0=0xffffffff
+v pos=440,214,0 uv0=9,20 color0=0xffffffff
+v pos=429,214,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 219 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=429,196,0 uv0=0,0 color0=0xffffffff
+v pos=440,196,0 uv0=9,0 color0=0xffffffff
+v pos=440,216,0 uv0=9,20 color0=0xffffffff
+v pos=429,216,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 220 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=178,218,0 uv0=460,20 color0=0xffffffff
+v pos=189,218,0 uv0=469,20 color0=0xffffffff
+v pos=189,236,0 uv0=469,38 color0=0xffffffff
+v pos=178,236,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 221 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=176,218,0 uv0=460,20 color0=0xffffffff
+v pos=187,218,0 uv0=469,20 color0=0xffffffff
+v pos=187,236,0 uv0=469,38 color0=0xffffffff
+v pos=176,236,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 222 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=178,214,0 uv0=460,20 color0=0xffffffff
+v pos=189,214,0 uv0=469,20 color0=0xffffffff
+v pos=189,232,0 uv0=469,38 color0=0xffffffff
+v pos=178,232,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 223 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=176,214,0 uv0=460,20 color0=0xffffffff
+v pos=187,214,0 uv0=469,20 color0=0xffffffff
+v pos=187,232,0 uv0=469,38 color0=0xffffffff
+v pos=176,232,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 224 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=178,216,0 uv0=460,20 color0=0xffffffff
+v pos=189,216,0 uv0=469,20 color0=0xffffffff
+v pos=189,234,0 uv0=469,38 color0=0xffffffff
+v pos=178,234,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 225 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=176,216,0 uv0=460,20 color0=0xffffffff
+v pos=187,216,0 uv0=469,20 color0=0xffffffff
+v pos=187,234,0 uv0=469,38 color0=0xffffffff
+v pos=176,234,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 226 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=177,218,0 uv0=460,20 color0=0xffffffff
+v pos=188,218,0 uv0=469,20 color0=0xffffffff
+v pos=188,236,0 uv0=469,38 color0=0xffffffff
+v pos=177,236,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 227 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=177,214,0 uv0=460,20 color0=0xffffffff
+v pos=188,214,0 uv0=469,20 color0=0xffffffff
+v pos=188,232,0 uv0=469,38 color0=0xffffffff
+v pos=177,232,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 228 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=177,216,0 uv0=460,20 color0=0xffffffff
+v pos=188,216,0 uv0=469,20 color0=0xffffffff
+v pos=188,234,0 uv0=469,38 color0=0xffffffff
+v pos=177,234,0 uv0=460,38 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 229 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=189,218,0 uv0=20,60 color0=0xffffffff
+v pos=195,218,0 uv0=25,60 color0=0xffffffff
+v pos=195,236,0 uv0=25,78 color0=0xffffffff
+v pos=189,236,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 230 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=187,218,0 uv0=20,60 color0=0xffffffff
+v pos=193,218,0 uv0=25,60 color0=0xffffffff
+v pos=193,236,0 uv0=25,78 color0=0xffffffff
+v pos=187,236,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 231 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=189,214,0 uv0=20,60 color0=0xffffffff
+v pos=195,214,0 uv0=25,60 color0=0xffffffff
+v pos=195,232,0 uv0=25,78 color0=0xffffffff
+v pos=189,232,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 232 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=187,214,0 uv0=20,60 color0=0xffffffff
+v pos=193,214,0 uv0=25,60 color0=0xffffffff
+v pos=193,232,0 uv0=25,78 color0=0xffffffff
+v pos=187,232,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 233 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=189,216,0 uv0=20,60 color0=0xffffffff
+v pos=195,216,0 uv0=25,60 color0=0xffffffff
+v pos=195,234,0 uv0=25,78 color0=0xffffffff
+v pos=189,234,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 234 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=187,216,0 uv0=20,60 color0=0xffffffff
+v pos=193,216,0 uv0=25,60 color0=0xffffffff
+v pos=193,234,0 uv0=25,78 color0=0xffffffff
+v pos=187,234,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 235 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=188,218,0 uv0=20,60 color0=0xffffffff
+v pos=194,218,0 uv0=25,60 color0=0xffffffff
+v pos=194,236,0 uv0=25,78 color0=0xffffffff
+v pos=188,236,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 236 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=188,214,0 uv0=20,60 color0=0xffffffff
+v pos=194,214,0 uv0=25,60 color0=0xffffffff
+v pos=194,232,0 uv0=25,78 color0=0xffffffff
+v pos=188,232,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 237 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=188,216,0 uv0=20,60 color0=0xffffffff
+v pos=194,216,0 uv0=25,60 color0=0xffffffff
+v pos=194,234,0 uv0=25,78 color0=0xffffffff
+v pos=188,234,0 uv0=20,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 238 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=195,218,0 uv0=380,40 color0=0xffffffff
+v pos=208,218,0 uv0=391,40 color0=0xffffffff
+v pos=208,236,0 uv0=391,58 color0=0xffffffff
+v pos=195,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 239 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=193,218,0 uv0=380,40 color0=0xffffffff
+v pos=206,218,0 uv0=391,40 color0=0xffffffff
+v pos=206,236,0 uv0=391,58 color0=0xffffffff
+v pos=193,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 240 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=195,214,0 uv0=380,40 color0=0xffffffff
+v pos=208,214,0 uv0=391,40 color0=0xffffffff
+v pos=208,232,0 uv0=391,58 color0=0xffffffff
+v pos=195,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 241 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=193,214,0 uv0=380,40 color0=0xffffffff
+v pos=206,214,0 uv0=391,40 color0=0xffffffff
+v pos=206,232,0 uv0=391,58 color0=0xffffffff
+v pos=193,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 242 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=195,216,0 uv0=380,40 color0=0xffffffff
+v pos=208,216,0 uv0=391,40 color0=0xffffffff
+v pos=208,234,0 uv0=391,58 color0=0xffffffff
+v pos=195,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 243 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=193,216,0 uv0=380,40 color0=0xffffffff
+v pos=206,216,0 uv0=391,40 color0=0xffffffff
+v pos=206,234,0 uv0=391,58 color0=0xffffffff
+v pos=193,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 244 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=194,218,0 uv0=380,40 color0=0xffffffff
+v pos=207,218,0 uv0=391,40 color0=0xffffffff
+v pos=207,236,0 uv0=391,58 color0=0xffffffff
+v pos=194,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 245 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=194,214,0 uv0=380,40 color0=0xffffffff
+v pos=207,214,0 uv0=391,40 color0=0xffffffff
+v pos=207,232,0 uv0=391,58 color0=0xffffffff
+v pos=194,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 246 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=194,216,0 uv0=380,40 color0=0xffffffff
+v pos=207,216,0 uv0=391,40 color0=0xffffffff
+v pos=207,234,0 uv0=391,58 color0=0xffffffff
+v pos=194,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 247 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=208,218,0 uv0=300,40 color0=0xffffffff
+v pos=221,218,0 uv0=311,40 color0=0xffffffff
+v pos=221,236,0 uv0=311,58 color0=0xffffffff
+v pos=208,236,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 248 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=206,218,0 uv0=300,40 color0=0xffffffff
+v pos=219,218,0 uv0=311,40 color0=0xffffffff
+v pos=219,236,0 uv0=311,58 color0=0xffffffff
+v pos=206,236,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 249 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=208,214,0 uv0=300,40 color0=0xffffffff
+v pos=221,214,0 uv0=311,40 color0=0xffffffff
+v pos=221,232,0 uv0=311,58 color0=0xffffffff
+v pos=208,232,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 250 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=206,214,0 uv0=300,40 color0=0xffffffff
+v pos=219,214,0 uv0=311,40 color0=0xffffffff
+v pos=219,232,0 uv0=311,58 color0=0xffffffff
+v pos=206,232,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 251 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=208,216,0 uv0=300,40 color0=0xffffffff
+v pos=221,216,0 uv0=311,40 color0=0xffffffff
+v pos=221,234,0 uv0=311,58 color0=0xffffffff
+v pos=208,234,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 252 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=206,216,0 uv0=300,40 color0=0xffffffff
+v pos=219,216,0 uv0=311,40 color0=0xffffffff
+v pos=219,234,0 uv0=311,58 color0=0xffffffff
+v pos=206,234,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 253 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=207,218,0 uv0=300,40 color0=0xffffffff
+v pos=220,218,0 uv0=311,40 color0=0xffffffff
+v pos=220,236,0 uv0=311,58 color0=0xffffffff
+v pos=207,236,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 254 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=207,214,0 uv0=300,40 color0=0xffffffff
+v pos=220,214,0 uv0=311,40 color0=0xffffffff
+v pos=220,232,0 uv0=311,58 color0=0xffffffff
+v pos=207,232,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 255 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=207,216,0 uv0=300,40 color0=0xffffffff
+v pos=220,216,0 uv0=311,40 color0=0xffffffff
+v pos=220,234,0 uv0=311,58 color0=0xffffffff
+v pos=207,234,0 uv0=300,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 256 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=221,218,0 uv0=160,60 color0=0xffffffff
+v pos=234,218,0 uv0=171,60 color0=0xffffffff
+v pos=234,236,0 uv0=171,78 color0=0xffffffff
+v pos=221,236,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 257 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=219,218,0 uv0=160,60 color0=0xffffffff
+v pos=232,218,0 uv0=171,60 color0=0xffffffff
+v pos=232,236,0 uv0=171,78 color0=0xffffffff
+v pos=219,236,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 258 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=221,214,0 uv0=160,60 color0=0xffffffff
+v pos=234,214,0 uv0=171,60 color0=0xffffffff
+v pos=234,232,0 uv0=171,78 color0=0xffffffff
+v pos=221,232,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 259 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=219,214,0 uv0=160,60 color0=0xffffffff
+v pos=232,214,0 uv0=171,60 color0=0xffffffff
+v pos=232,232,0 uv0=171,78 color0=0xffffffff
+v pos=219,232,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 260 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=221,216,0 uv0=160,60 color0=0xffffffff
+v pos=234,216,0 uv0=171,60 color0=0xffffffff
+v pos=234,234,0 uv0=171,78 color0=0xffffffff
+v pos=221,234,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 261 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=219,216,0 uv0=160,60 color0=0xffffffff
+v pos=232,216,0 uv0=171,60 color0=0xffffffff
+v pos=232,234,0 uv0=171,78 color0=0xffffffff
+v pos=219,234,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 262 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=220,218,0 uv0=160,60 color0=0xffffffff
+v pos=233,218,0 uv0=171,60 color0=0xffffffff
+v pos=233,236,0 uv0=171,78 color0=0xffffffff
+v pos=220,236,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 263 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=220,214,0 uv0=160,60 color0=0xffffffff
+v pos=233,214,0 uv0=171,60 color0=0xffffffff
+v pos=233,232,0 uv0=171,78 color0=0xffffffff
+v pos=220,232,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 264 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=220,216,0 uv0=160,60 color0=0xffffffff
+v pos=233,216,0 uv0=171,60 color0=0xffffffff
+v pos=233,234,0 uv0=171,78 color0=0xffffffff
+v pos=220,234,0 uv0=160,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 265 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=234,218,0 uv0=380,40 color0=0xffffffff
+v pos=247,218,0 uv0=391,40 color0=0xffffffff
+v pos=247,236,0 uv0=391,58 color0=0xffffffff
+v pos=234,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 266 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=232,218,0 uv0=380,40 color0=0xffffffff
+v pos=245,218,0 uv0=391,40 color0=0xffffffff
+v pos=245,236,0 uv0=391,58 color0=0xffffffff
+v pos=232,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 267 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=234,214,0 uv0=380,40 color0=0xffffffff
+v pos=247,214,0 uv0=391,40 color0=0xffffffff
+v pos=247,232,0 uv0=391,58 color0=0xffffffff
+v pos=234,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 268 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=232,214,0 uv0=380,40 color0=0xffffffff
+v pos=245,214,0 uv0=391,40 color0=0xffffffff
+v pos=245,232,0 uv0=391,58 color0=0xffffffff
+v pos=232,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 269 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=234,216,0 uv0=380,40 color0=0xffffffff
+v pos=247,216,0 uv0=391,40 color0=0xffffffff
+v pos=247,234,0 uv0=391,58 color0=0xffffffff
+v pos=234,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 270 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=232,216,0 uv0=380,40 color0=0xffffffff
+v pos=245,216,0 uv0=391,40 color0=0xffffffff
+v pos=245,234,0 uv0=391,58 color0=0xffffffff
+v pos=232,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 271 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=233,218,0 uv0=380,40 color0=0xffffffff
+v pos=246,218,0 uv0=391,40 color0=0xffffffff
+v pos=246,236,0 uv0=391,58 color0=0xffffffff
+v pos=233,236,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 272 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=233,214,0 uv0=380,40 color0=0xffffffff
+v pos=246,214,0 uv0=391,40 color0=0xffffffff
+v pos=246,232,0 uv0=391,58 color0=0xffffffff
+v pos=233,232,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 273 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=233,216,0 uv0=380,40 color0=0xffffffff
+v pos=246,216,0 uv0=391,40 color0=0xffffffff
+v pos=246,234,0 uv0=391,58 color0=0xffffffff
+v pos=233,234,0 uv0=380,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 274 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=247,218,0 uv0=0,0 color0=0xffffffff
+v pos=258,218,0 uv0=9,0 color0=0xffffffff
+v pos=258,238,0 uv0=9,20 color0=0xffffffff
+v pos=247,238,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 275 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=245,218,0 uv0=0,0 color0=0xffffffff
+v pos=256,218,0 uv0=9,0 color0=0xffffffff
+v pos=256,238,0 uv0=9,20 color0=0xffffffff
+v pos=245,238,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 276 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=247,214,0 uv0=0,0 color0=0xffffffff
+v pos=258,214,0 uv0=9,0 color0=0xffffffff
+v pos=258,234,0 uv0=9,20 color0=0xffffffff
+v pos=247,234,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 277 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=245,214,0 uv0=0,0 color0=0xffffffff
+v pos=256,214,0 uv0=9,0 color0=0xffffffff
+v pos=256,234,0 uv0=9,20 color0=0xffffffff
+v pos=245,234,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 278 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=247,216,0 uv0=0,0 color0=0xffffffff
+v pos=258,216,0 uv0=9,0 color0=0xffffffff
+v pos=258,236,0 uv0=9,20 color0=0xffffffff
+v pos=247,236,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 279 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=245,216,0 uv0=0,0 color0=0xffffffff
+v pos=256,216,0 uv0=9,0 color0=0xffffffff
+v pos=256,236,0 uv0=9,20 color0=0xffffffff
+v pos=245,236,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 280 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=246,218,0 uv0=0,0 color0=0xffffffff
+v pos=257,218,0 uv0=9,0 color0=0xffffffff
+v pos=257,238,0 uv0=9,20 color0=0xffffffff
+v pos=246,238,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 281 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=246,214,0 uv0=0,0 color0=0xffffffff
+v pos=257,214,0 uv0=9,0 color0=0xffffffff
+v pos=257,234,0 uv0=9,20 color0=0xffffffff
+v pos=246,234,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 282 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=246,216,0 uv0=0,0 color0=0xffffffff
+v pos=257,216,0 uv0=9,0 color0=0xffffffff
+v pos=257,236,0 uv0=9,20 color0=0xffffffff
+v pos=246,236,0 uv0=0,20 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 283 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=258,218,0 uv0=360,40 color0=0xffffffff
+v pos=271,218,0 uv0=371,40 color0=0xffffffff
+v pos=271,236,0 uv0=371,58 color0=0xffffffff
+v pos=258,236,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 284 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=256,218,0 uv0=360,40 color0=0xffffffff
+v pos=269,218,0 uv0=371,40 color0=0xffffffff
+v pos=269,236,0 uv0=371,58 color0=0xffffffff
+v pos=256,236,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 285 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=258,214,0 uv0=360,40 color0=0xffffffff
+v pos=271,214,0 uv0=371,40 color0=0xffffffff
+v pos=271,232,0 uv0=371,58 color0=0xffffffff
+v pos=258,232,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 286 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=256,214,0 uv0=360,40 color0=0xffffffff
+v pos=269,214,0 uv0=371,40 color0=0xffffffff
+v pos=269,232,0 uv0=371,58 color0=0xffffffff
+v pos=256,232,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 287 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=258,216,0 uv0=360,40 color0=0xffffffff
+v pos=271,216,0 uv0=371,40 color0=0xffffffff
+v pos=271,234,0 uv0=371,58 color0=0xffffffff
+v pos=258,234,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 288 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=256,216,0 uv0=360,40 color0=0xffffffff
+v pos=269,216,0 uv0=371,40 color0=0xffffffff
+v pos=269,234,0 uv0=371,58 color0=0xffffffff
+v pos=256,234,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 289 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=257,218,0 uv0=360,40 color0=0xffffffff
+v pos=270,218,0 uv0=371,40 color0=0xffffffff
+v pos=270,236,0 uv0=371,58 color0=0xffffffff
+v pos=257,236,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 290 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=257,214,0 uv0=360,40 color0=0xffffffff
+v pos=270,214,0 uv0=371,40 color0=0xffffffff
+v pos=270,232,0 uv0=371,58 color0=0xffffffff
+v pos=257,232,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 291 ===
+state=1
+topology=0 vertex_count=4 index_count=6
+v pos=257,216,0 uv0=360,40 color0=0xffffffff
+v pos=270,216,0 uv0=371,40 color0=0xffffffff
+v pos=270,234,0 uv0=371,58 color0=0xffffffff
+v pos=257,234,0 uv0=360,58 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 292 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=271,218,0 uv0=80,60 color0=0xffffffff
+v pos=284,218,0 uv0=91,60 color0=0xffffffff
+v pos=284,236,0 uv0=91,78 color0=0xffffffff
+v pos=271,236,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 293 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=269,218,0 uv0=80,60 color0=0xffffffff
+v pos=282,218,0 uv0=91,60 color0=0xffffffff
+v pos=282,236,0 uv0=91,78 color0=0xffffffff
+v pos=269,236,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 294 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=271,214,0 uv0=80,60 color0=0xffffffff
+v pos=284,214,0 uv0=91,60 color0=0xffffffff
+v pos=284,232,0 uv0=91,78 color0=0xffffffff
+v pos=271,232,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 295 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=269,214,0 uv0=80,60 color0=0xffffffff
+v pos=282,214,0 uv0=91,60 color0=0xffffffff
+v pos=282,232,0 uv0=91,78 color0=0xffffffff
+v pos=269,232,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 296 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=271,216,0 uv0=80,60 color0=0xffffffff
+v pos=284,216,0 uv0=91,60 color0=0xffffffff
+v pos=284,234,0 uv0=91,78 color0=0xffffffff
+v pos=271,234,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 297 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=269,216,0 uv0=80,60 color0=0xffffffff
+v pos=282,216,0 uv0=91,60 color0=0xffffffff
+v pos=282,234,0 uv0=91,78 color0=0xffffffff
+v pos=269,234,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 298 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=270,218,0 uv0=80,60 color0=0xffffffff
+v pos=283,218,0 uv0=91,60 color0=0xffffffff
+v pos=283,236,0 uv0=91,78 color0=0xffffffff
+v pos=270,236,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
+=== draw 299 ===
+state=0
+topology=0 vertex_count=4 index_count=6
+v pos=270,214,0 uv0=80,60 color0=0xffffffff
+v pos=283,214,0 uv0=91,60 color0=0xffffffff
+v pos=283,232,0 uv0=91,78 color0=0xffffffff
+v pos=270,232,0 uv0=80,78 color0=0xffffffff
+i 0
+i 1
+i 2
+i 0
+i 2
+i 3
