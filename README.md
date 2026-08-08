@@ -186,9 +186,15 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 
 ### What's next
 
-- Root-cause why Phase 8's per-draw-shader capture renders near-black
-  instead of its real texture color (likely an alpha-compare/discard
-  condition in that state's real captured BP values)
+- **Root cause found for Phase 8's near-black output, not yet fixed**: no
+  real per-draw shader constants (TEV konst colors, material colors, the
+  alpha-test reference value, etc.) are ever computed from captured
+  BPMemory/XFMemory — `FillIdentityAndOnes` (`tests/native_render_window.cpp`)
+  blanket-fills every non-matrix cbuffer variable with generic `1.0f`
+  regardless of what the real state says. Dolphin's real
+  `PixelShaderManager`/`VertexShaderManager` (which compute these from real
+  state) aren't used anywhere in this codebase. See `HANDOFF.md`'s "What's
+  NOT done yet" section for the full writeup.
 - Get a real interactive-combat capture through the per-draw-shader path
   (Phase 8 was only tested against a headless/automated capture) to see
   more varied real shading

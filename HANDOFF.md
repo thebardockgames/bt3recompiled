@@ -316,7 +316,7 @@ phase summary. Technical detail an implementer needs:
 
 ## What's NOT done yet / next steps
 
-**Honest status as of 2026-08-07 (Phases 6/6b/6c/7/7b landed):** the
+**Honest status as of 2026-08-08 (Phases 6/6b/6c/7/7b/7c/8 landed):** the
 background/UI-tile-mosaic problem from the original write-up below (Phases
 0-5b) is now substantially resolved. `GxVertexDumpDevice` filters out draws
 whose vertex colors are uniform (RGB-only comparison, ignoring alpha —
@@ -325,29 +325,57 @@ visibly slows the game during a full play session (Phase 6b), and scans
 texture units 0-3 per draw instead of hardcoding unit 0, rejecting only
 fully-transparent (not merely flat-but-opaque) decodes (Phase 7/7b — an
 opaque flat texture modulated by real per-vertex color is a normal, valid
-UI technique and was being wrongly discarded in Phase 7's first cut).
+UI technique and was being wrongly discarded in Phase 7's first cut). Phase
+7c fixed captured per-vertex color being parsed but then silently discarded
+and fed as hardcoded white. Phase 8 fixed a bigger architectural problem:
+every draw was rendering with ONE shared shader compiled from a single
+fixed reference state, regardless of its own real captured TEV/BP state —
+each of the 300 captured draws now compiles and renders with its own real
+shader (300/300 covered, no compile failures; see
+`phase8_frame0_readback.png`).
 
-**Result, visually confirmed via framebuffer readback:** a real interactive
-combat capture with all of the above active produced 1200 real vertices, a
-real 4×4 opaque-white texture, and — for the first time — **structured,
-recognizable UI shapes** (a cross/diamond icon shape and what looks like a
-bar-plus-label, consistent with a health/ki bar and name tag) instead of a
-single undifferentiated rectangle or a blank frame. Saved as
-`phase7b_frame0_readback.png` at the project root. Everything currently
-renders flat white (the captured texture is white and this particular
-frame's combined vertex/texture color happened to stay white), not yet
-colorful character art — that's the next visual milestone, not a bug to
-fix.
+**Result, visually confirmed via framebuffer readback:** a real capture now
+renders **distinct, correctly-positioned real shapes** (a small square and
+an L-shaped/stepped bar) using each draw's own real shader, instead of one
+shared look for everything. Currently near-black rather than colorful —
+see the root-cause finding below, item 1.
 
 **Next steps, in likely priority order:**
 
-1. **Get color, not just shape.** Now that real distinct UI geometry
-   renders, the next win is seeing actual color variation (the captured
-   vertex data DOES vary in RGB — Phase 6c's investigation found real
-   gradients — so this may already work with a different capture, or the
-   render/blend setup may need adjustment to actually show per-vertex color
-   instead of flattening to white). Try a few more capture+render rounds
-   before assuming a real bug.
+1. **Root cause found for Phase 8's near-black output — not yet fixed.**
+   The working theory when Phase 8 landed was "an alpha-compare/discard
+   condition in that state's real captured BP values." That's wrong, or at
+   least not the primary cause. The real bug: **no real per-draw shader
+   constant data is ever fed to any of these shaders, for any phase.**
+   `DolphinShaderCompiler::Compile()` correctly generates real shader CODE
+   from the real captured BPMemory/XFMemory (TEV combiner structure, alpha
+   test, etc. are all baked into the HLSL logic itself, and that part is
+   proven correct since Phase 1). But the shader's runtime constant-buffer
+   INPUTS — TEV konst colors (k0-k3), material/ambient colors, the
+   alpha-test reference value, fog params, indirect-texture params, etc. —
+   are never computed from real state at all. `FillIdentityAndOnes()`
+   (`tests/native_render_window.cpp:497`) blanket-fills every cbuffer
+   variable that isn't matrix-shaped or `cpixelcenter` with generic `1.0f`,
+   regardless of what the real captured BP state actually says that
+   constant should be. Confirmed via `grep`: `PixelShaderManager` and
+   `VertexShaderManager` — Dolphin's real classes that compute these
+   constants from bpmem/xfmem (see `vendor/dolphin_legacy/VideoCommon/`) —
+   are referenced nowhere in this codebase. This was always broken, but
+   Phase 8 is the first time real, distinct per-draw TEV states actually
+   get exercised (every prior phase shared one fixed reference
+   state/shader), so it's the first time wrong constants visibly skew the
+   TEV math to near-zero output instead of coincidentally landing on
+   white. (Also confirmed the D3D12 blend state — `SrcBlend=ONE`/
+   `DestBlend=ZERO`, i.e. pure overwrite, `tests/native_render_window.cpp`
+   ~line 743 — is NOT the cause: whatever the shader computes is written
+   to the render target unmodified. It's a separate, secondary gap that
+   real `BPMEM_BLENDMODE` state is never read for the PSO either.)
+   **Next concrete fix**: wire real per-draw constant computation (via
+   Dolphin's `PixelShaderManager`/`VertexShaderManager` update path, fed
+   from the real captured bpmem/xfmem alongside `LoadState()` in
+   `dolphin_shader_compiler.cpp`) and map the resulting values into each
+   reflected cbuffer's real offsets in `FillIdentityAndOnes`'s place,
+   instead of the generic 1.0f/identity fill.
 2. **Try to land on actual character geometry, not just HUD/UI.** Every
    real capture so far (including this one) still looks HUD/UI-shaped
    (screen-space quads, bar/icon silhouettes) rather than a 3D character
