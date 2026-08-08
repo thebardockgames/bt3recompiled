@@ -153,8 +153,9 @@ framebuffer readback, not just "no errors logged")
 | 7/7b | Scan texture units 0-3 per draw instead of hardcoding unit 0, reject only fully-transparent decodes (a flat but *opaque* texture modulated by vertex color is normal, valid UI rendering, not something to discard) |
 | 7c | Fixed a real bug: captured per-vertex color was parsed from the dump but then silently discarded, always fed as hardcoded white. Fixing it changed nothing visually — revealed the deeper Phase 8 issue below |
 | 8 | **Architectural fix**: every draw was being rendered with ONE shared shader compiled from a single fixed reference state captured early on, regardless of what that draw's own real TEV/BP state actually was. Each of the 300 captured draws now compiles and renders with **its own real captured shader** — confirmed covering 300/300 draws with independent PSOs, no compile failures |
+| 9 | **Root cause of the near-black output, fixed**: no real per-draw shader *constants* (TEV konst colors, alpha-test reference, blend mode, etc.) were ever computed from captured state — every prior phase fed the real shader code generic identity/`1.0f` cbuffer data instead. Reimplemented the relevant subset of Dolphin's real `PixelShaderManager` math directly from captured `bpmem`/`xfmem` (`BuildRealPixelConstants` in `dolphin_shader_compiler.cpp`) and wired it into the real per-draw PS cbuffer |
 
-**Result:** a real capture now renders **distinct, correctly-positioned shapes** using each draw's own real shader (a small square and an L-shaped/stepped bar — see `phase8_frame0_readback.png`), rather than a single shared look for everything. Currently near-black rather than colorful: this specific capture's real texture is a flat teal-ish color at 50% alpha, and something in its real alpha-compare/TEV logic is darkening the result — a narrower, separate bug from the shared-shader problem Phase 8 fixed, not yet investigated.
+**Result:** the same capture that rendered near-black in Phase 8 now shows its real color — a bright teal/cyan (readback: avg=(9.9,56.0,69.8), max=(13,255,255), 23.67% non-background pixels), visibly matching the "flat teal-ish, 50% alpha" texture identified back in Phase 8 — see `phase9_frame0_readback.png`. The square and L-shaped bar are now genuinely rendering their real captured color, not just their real shape.
 
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
@@ -186,18 +187,15 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 
 ### What's next
 
-- **Root cause found for Phase 8's near-black output, not yet fixed**: no
-  real per-draw shader constants (TEV konst colors, material colors, the
-  alpha-test reference value, etc.) are ever computed from captured
-  BPMemory/XFMemory — `FillIdentityAndOnes` (`tests/native_render_window.cpp`)
-  blanket-fills every non-matrix cbuffer variable with generic `1.0f`
-  regardless of what the real state says. Dolphin's real
-  `PixelShaderManager`/`VertexShaderManager` (which compute these from real
-  state) aren't used anywhere in this codebase. See `HANDOFF.md`'s "What's
-  NOT done yet" section for the full writeup.
+- **Fixed in Phase 9**: real per-draw pixel-shader constants (see the phase
+  table above). Note `VertexShaderConstants`/`FillIdentityAndOnes` for the
+  VS stage was deliberately left untouched — the current bounding-box NDC
+  positioning already works and depends on the VS cbuffer staying at its
+  generic identity fill, so real VS constants are a separate, riskier piece
+  of follow-up work, not a quick extension of the Phase 9 approach.
 - Get a real interactive-combat capture through the per-draw-shader path
   (Phase 8 was only tested against a headless/automated capture) to see
-  more varied real shading
+  more varied real shading, now with working real color
 - Try to land on actual 3D character geometry instead of HUD/UI content
 - Once real character/effect art is actually captured: a real camera/
   projection setup, since the current bounding-box NDC normalization only

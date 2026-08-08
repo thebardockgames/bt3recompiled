@@ -316,7 +316,7 @@ phase summary. Technical detail an implementer needs:
 
 ## What's NOT done yet / next steps
 
-**Honest status as of 2026-08-08 (Phases 6/6b/6c/7/7b/7c/8 landed):** the
+**Honest status as of 2026-08-08 (Phases 6/6b/6c/7/7b/7c/8/9 landed):** the
 background/UI-tile-mosaic problem from the original write-up below (Phases
 0-5b) is now substantially resolved. `GxVertexDumpDevice` filters out draws
 whose vertex colors are uniform (RGB-only comparison, ignoring alpha —
@@ -332,50 +332,84 @@ every draw was rendering with ONE shared shader compiled from a single
 fixed reference state, regardless of its own real captured TEV/BP state —
 each of the 300 captured draws now compiles and renders with its own real
 shader (300/300 covered, no compile failures; see
-`phase8_frame0_readback.png`).
+`phase8_frame0_readback.png`). Phase 9 fixed the resulting near-black
+output (see item 1 below, now resolved).
 
-**Result, visually confirmed via framebuffer readback:** a real capture now
-renders **distinct, correctly-positioned real shapes** (a small square and
-an L-shaped/stepped bar) using each draw's own real shader, instead of one
-shared look for everything. Currently near-black rather than colorful —
-see the root-cause finding below, item 1.
+**Result, visually confirmed via framebuffer readback:** the same capture
+that rendered near-black after Phase 8 now renders its real color: a bright
+teal/cyan square and L-shaped bar (readback stats: avg=(9.9,56.0,69.8),
+min=(0,13,31), max=(13,255,255), 23.67% non-background pixels — see
+`phase9_frame0_readback.png`), using each draw's own real shader AND real
+per-draw shader constants.
 
 **Next steps, in likely priority order:**
 
-1. **Root cause found for Phase 8's near-black output — not yet fixed.**
-   The working theory when Phase 8 landed was "an alpha-compare/discard
-   condition in that state's real captured BP values." That's wrong, or at
-   least not the primary cause. The real bug: **no real per-draw shader
-   constant data is ever fed to any of these shaders, for any phase.**
-   `DolphinShaderCompiler::Compile()` correctly generates real shader CODE
-   from the real captured BPMemory/XFMemory (TEV combiner structure, alpha
-   test, etc. are all baked into the HLSL logic itself, and that part is
+1. ~~Root cause found for Phase 8's near-black output — not yet fixed.~~
+   **Fixed in Phase 9.** The working theory when Phase 8 landed was "an
+   alpha-compare/discard condition in that state's real captured BP
+   values." That was wrong. The real bug: **no real per-draw shader
+   constant data was ever fed to any of these shaders, for any phase.**
+   `DolphinShaderCompiler::Compile()` always correctly generated real
+   shader CODE from the real captured BPMemory/XFMemory (TEV combiner
+   structure, alpha test, etc. are all baked into the HLSL logic itself,
    proven correct since Phase 1). But the shader's runtime constant-buffer
    INPUTS — TEV konst colors (k0-k3), material/ambient colors, the
    alpha-test reference value, fog params, indirect-texture params, etc. —
-   are never computed from real state at all. `FillIdentityAndOnes()`
-   (`tests/native_render_window.cpp:497`) blanket-fills every cbuffer
-   variable that isn't matrix-shaped or `cpixelcenter` with generic `1.0f`,
-   regardless of what the real captured BP state actually says that
-   constant should be. Confirmed via `grep`: `PixelShaderManager` and
-   `VertexShaderManager` — Dolphin's real classes that compute these
-   constants from bpmem/xfmem (see `vendor/dolphin_legacy/VideoCommon/`) —
-   are referenced nowhere in this codebase. This was always broken, but
-   Phase 8 is the first time real, distinct per-draw TEV states actually
-   get exercised (every prior phase shared one fixed reference
-   state/shader), so it's the first time wrong constants visibly skew the
-   TEV math to near-zero output instead of coincidentally landing on
-   white. (Also confirmed the D3D12 blend state — `SrcBlend=ONE`/
-   `DestBlend=ZERO`, i.e. pure overwrite, `tests/native_render_window.cpp`
-   ~line 743 — is NOT the cause: whatever the shader computes is written
-   to the render target unmodified. It's a separate, secondary gap that
-   real `BPMEM_BLENDMODE` state is never read for the PSO either.)
-   **Next concrete fix**: wire real per-draw constant computation (via
-   Dolphin's `PixelShaderManager`/`VertexShaderManager` update path, fed
-   from the real captured bpmem/xfmem alongside `LoadState()` in
-   `dolphin_shader_compiler.cpp`) and map the resulting values into each
-   reflected cbuffer's real offsets in `FillIdentityAndOnes`'s place,
-   instead of the generic 1.0f/identity fill.
+   were never computed from real state at all; `FillIdentityAndOnes()`
+   (`tests/native_render_window.cpp`) blanket-filled every cbuffer
+   variable that wasn't matrix-shaped or `cpixelcenter` with generic
+   `1.0f`. This was always broken, but Phase 8 was the first time real,
+   distinct per-draw TEV states actually got exercised (every prior phase
+   shared one fixed reference state/shader), so it was the first time
+   wrong constants visibly skewed the TEV math to near-zero output instead
+   of coincidentally landing on white.
+
+   **The fix**: `BuildRealPixelConstants()` in `dolphin_shader_compiler.cpp`
+   computes a real `PixelShaderConstants` (see
+   `vendor/dolphin_legacy/VideoCommon/ConstantManager.h`) directly from the
+   now-global `bpmem`/`xfmem` (populated by `LoadState()` just before it
+   runs), and `DolphinShaderCompiler::Compile()` returns it as
+   `DolphinShaderBundle::pixel_constants`. `native_render_window.cpp`'s
+   `write_cbuffers` uploads those real bytes for the PS stage whenever the
+   reflected cbuffer's byte size matches `sizeof(PixelShaderConstants)`
+   exactly (falls back to `FillIdentityAndOnes` otherwise, so a size
+   mismatch can't corrupt memory) — this works because Dolphin's real
+   `PSBlock` GLSL uniform block (see `PixelShaderGen.cpp`'s
+   `WriteUBO`/`UBO_BINDING(std140, 1) uniform PSBlock` declaration) is
+   field-for-field, byte-for-byte identical to that C++ struct by
+   construction; that's the same assumption real Dolphin's own D3D backend
+   relies on.
+
+   This deliberately does **not** go through the real
+   `vendor/dolphin_legacy` `PixelShaderManager` class, even though it's
+   "the real way." `PixelShaderManager::Dirty()` and the fog-range-adjust
+   branch of `SetConstants()` both call into `g_framebuffer_manager`, a
+   live `FramebufferManager` this offline probe never constructs (and does
+   not link — pulling one in cascades into needing a working destructor
+   for a class with `AbstractTexture`/`AbstractPipeline` members, which
+   cascades further). Since every `Set*()` method in that class is
+   otherwise a pure function of `bpmem`/`xfmem`/`g_ActiveConfig` (confirmed
+   by reading `PixelShaderManager.cpp` directly), `BuildRealPixelConstants`
+   instead replicates that same math by hand, substituting the native (1x)
+   EFB-scale identity for the two `FramebufferManager`-scale calls (exactly
+   what a real one would compute anyway, since this probe never configures
+   upscaling). `vendor/dolphin_legacy/VideoCommon/RenderState.cpp` (for
+   `BlendingState::Generate`, used for the real blend-mode fields) was
+   added to `CMakeLists.txt`'s `moderngekko_dolphin_video` sources — it has
+   no such dependency issues.
+
+   **Deliberately NOT done as part of this fix**: the VS stage's cbuffer
+   (`VertexShaderConstants`/`VSBlock`) still uses the old
+   `FillIdentityAndOnes` fill, including the special-cased `cpixelcenter`
+   value. Positions are already correct (Phase 2c/3c fixed the corner-
+   pinning bug, Phase 8 confirmed correctly-positioned shapes) via
+   `LoadRealGeometry()`'s CPU-side bounding-box NDC placement, which is
+   tuned to work WITH near-identity VS matrices — swapping in real
+   captured transform/projection matrices would send those
+   already-CPU-normalized positions through a real, unrelated camera
+   transform and likely break positioning. Real VS constants (needed
+   eventually for a real camera/projection, see item 3 below) are separate
+   follow-up work, not a trivial extension of this fix.
 2. **Try to land on actual character geometry, not just HUD/UI.** Every
    real capture so far (including this one) still looks HUD/UI-shaped
    (screen-space quads, bar/icon silhouettes) rather than a 3D character
