@@ -154,8 +154,11 @@ framebuffer readback, not just "no errors logged")
 | 7c | Fixed a real bug: captured per-vertex color was parsed from the dump but then silently discarded, always fed as hardcoded white. Fixing it changed nothing visually — revealed the deeper Phase 8 issue below |
 | 8 | **Architectural fix**: every draw was being rendered with ONE shared shader compiled from a single fixed reference state captured early on, regardless of what that draw's own real TEV/BP state actually was. Each of the 300 captured draws now compiles and renders with **its own real captured shader** — confirmed covering 300/300 draws with independent PSOs, no compile failures |
 | 9 | **Root cause of the near-black output, fixed**: no real per-draw shader *constants* (TEV konst colors, alpha-test reference, blend mode, etc.) were ever computed from captured state — every prior phase fed the real shader code generic identity/`1.0f` cbuffer data instead. Reimplemented the relevant subset of Dolphin's real `PixelShaderManager` math directly from captured `bpmem`/`xfmem` (`BuildRealPixelConstants` in `dolphin_shader_compiler.cpp`) and wired it into the real per-draw PS cbuffer |
+| 9b | Replaced the unreliable `MODERNGEKKO_GX_VERTEX_DUMP_SKIP_SECONDS` boot/menu-skip guess with F9-gated manual capture arming (`GxVertexDumpDevice::ToggleArmed()`, edge-triggered `GetAsyncKeyState(VK_F9)` polling in `OnRawFifoBytesForDump`) — the player presses F9 exactly when they reach real gameplay instead of guessing a fixed delay. First real interactive-combat capture with it: **11 distinct real shaders** across 180/300 draws, **4 distinct real textures** (256×256, 640×448, 4×4), and a real 3D bounding box (`x=[-359,32903] y=[-7874,448]`, vs. every prior capture's small near-planar UI-scale boxes) |
 
 **Result:** the same capture that rendered near-black in Phase 8 now shows its real color — a bright teal/cyan (readback: avg=(9.9,56.0,69.8), max=(13,255,255), 23.67% non-background pixels), visibly matching the "flat teal-ish, 50% alpha" texture identified back in Phase 8 — see `phase9_frame0_readback.png`. The square and L-shaped bar are now genuinely rendering their real captured color, not just their real shape.
+
+**Phase 9b result:** the first real interactive-combat capture (F9-armed mid-fight) renders a real, differently-shaped, multi-colored element (gray/cream/pink-accented diagonal shape, consistent with a combat effect like an energy trail or hit slash — see `phase9_combat_readback.png`), confirming Phase 9's real-constants fix also holds up against genuinely varied real gameplay data, not just the one reference capture used to diagnose it.
 
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
@@ -193,10 +196,18 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
   positioning already works and depends on the VS cbuffer staying at its
   generic identity fill, so real VS constants are a separate, riskier piece
   of follow-up work, not a quick extension of the Phase 9 approach.
-- Get a real interactive-combat capture through the per-draw-shader path
-  (Phase 8 was only tested against a headless/automated capture) to see
-  more varied real shading, now with working real color
+- **Done in Phase 9b**: a real interactive-combat capture through the
+  per-draw-shader path, now with F9 arming instead of a guessed delay.
 - Try to land on actual 3D character geometry instead of HUD/UI content
+  — Phase 9b's capture already shows a much larger, non-planar bounding
+  box than any prior capture, but the rendered element still reads as a
+  combat *effect* shape, not obviously a character mesh; capturing longer
+  fights or specific attack animations may be needed
+- Note for future capture sessions: `moderngekko-run.exe`'s default audio
+  backend (WASAPI Exclusive Mode) takes exclusive control of the system
+  audio device, silencing/blocking other apps (observed: YouTube, Discord)
+  for as long as the game window is open. Pass `--audio "No Audio Output"`
+  (as `scratch_launch_combat_capture.bat` now does) to avoid this.
 - Once real character/effect art is actually captured: a real camera/
   projection setup, since the current bounding-box NDC normalization only
   works for near-planar/UI-style geometry

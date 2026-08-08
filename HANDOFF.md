@@ -342,6 +342,26 @@ min=(0,13,31), max=(13,255,255), 23.67% non-background pixels — see
 `phase9_frame0_readback.png`), using each draw's own real shader AND real
 per-draw shader constants.
 
+**Phase 9b, same day:** replaced the `MODERNGEKKO_GX_VERTEX_DUMP_SKIP_SECONDS`
+boot/menu-skip guess with F9-gated manual arming (`GxVertexDumpDevice`
+starts disarmed; `OnRawFifoBytesForDump` edge-triggers on
+`GetAsyncKeyState(VK_F9)` and calls `ToggleArmed()`, logging the
+armed/paused transition to stderr) — real boot+menu time varies session to
+session, so a fixed delay either still captures menu content (too short)
+or can outlast a short session without ever arming (too long). First real
+interactive-combat capture with it landed on 11 distinct real shaders
+across 180/300 draws, 4 distinct real textures, and a real 3D bounding box
+(`x=[-359,32903] y=[-7874,448]`, dwarfing every prior capture's small
+near-planar UI-scale box) — see `phase9_combat_readback.png`, a real
+multi-colored combat-effect-looking shape, confirming Phase 9's fix holds
+up against real varied gameplay data, not just the one reference capture
+used to diagnose it. Also note for future sessions: `moderngekko-run.exe`'s
+default audio backend (WASAPI Exclusive Mode) takes exclusive control of
+the system audio device the whole time the window is open (observed
+side effect: silences other apps like YouTube/Discord) — pass
+`--audio "No Audio Output"` to avoid this (already done in
+`scratch_launch_combat_capture.bat`).
+
 **Next steps, in likely priority order:**
 
 1. ~~Root cause found for Phase 8's near-black output — not yet fixed.~~
@@ -411,15 +431,18 @@ per-draw shader constants.
    eventually for a real camera/projection, see item 3 below) are separate
    follow-up work, not a trivial extension of this fix.
 2. **Try to land on actual character geometry, not just HUD/UI.** Every
-   real capture so far (including this one) still looks HUD/UI-shaped
-   (screen-space quads, bar/icon silhouettes) rather than a 3D character
-   mesh. The RGB-uniform filter targets flat-shaded backgrounds specifically
-   and doesn't bias toward or against HUD vs. character content otherwise —
-   getting a character mesh may need capturing many more candidate draws
-   per session (raise `m_max_draws` further) and inspecting which ones have
-   3D-looking (non-axis-aligned, actual-depth) positions vs. screen-space
-   quads, or capturing during a specific moment (e.g. a special attack
-   cutscene) where character geometry is more prominent in the draw order.
+   capture up through Phase 8 still looked HUD/UI-shaped (screen-space
+   quads, bar/icon silhouettes). Phase 9b's F9-armed real-combat capture
+   broke that pattern (a real, large, non-planar 3D bounding box) but the
+   rendered shape still reads as a combat *effect* (energy trail/slash),
+   not obviously a character mesh. The RGB-uniform filter targets
+   flat-shaded backgrounds specifically and doesn't bias toward or against
+   HUD vs. character content otherwise — getting a character mesh may need
+   capturing many more candidate draws per session (raise `m_max_draws`
+   further) and inspecting which ones have 3D-looking (non-axis-aligned,
+   actual-depth) positions vs. screen-space quads, or capturing during a
+   specific moment (e.g. a special attack cutscene) where character
+   geometry is more prominent in the draw order.
 3. **More than a few hundred merged draw calls, and a real camera/projection.**
    Even with 300 draws (up from 16 in Phase 2b/3), everything captured so
    far is still near-planar/UI-style geometry, so the bounding-box NDC
