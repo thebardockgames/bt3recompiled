@@ -151,8 +151,10 @@ framebuffer readback, not just "no errors logged")
 | 5/5b | Raised merged draw-call capture from 16 to 300, added a capture-start delay to skip past the boot/menu flow — did not by itself fix the background/UI bias (see next row) |
 | 6/6b/6c | Fixed it: filter out draws with uniform (RGB-only) vertex color, throttle the capture's RAM-refresh so it no longer visibly slows the game, broaden the filter to catch animated-alpha variants of the same flat overlay |
 | 7/7b | Scan texture units 0-3 per draw instead of hardcoding unit 0, reject only fully-transparent decodes (a flat but *opaque* texture modulated by vertex color is normal, valid UI rendering, not something to discard) |
+| 7c | Fixed a real bug: captured per-vertex color was parsed from the dump but then silently discarded, always fed as hardcoded white. Fixing it changed nothing visually — revealed the deeper Phase 8 issue below |
+| 8 | **Architectural fix**: every draw was being rendered with ONE shared shader compiled from a single fixed reference state captured early on, regardless of what that draw's own real TEV/BP state actually was. Each of the 300 captured draws now compiles and renders with **its own real captured shader** — confirmed covering 300/300 draws with independent PSOs, no compile failures |
 
-**Result:** a real interactive combat capture now renders **recognizable, structured UI shapes** (a HUD icon and a bar-plus-label, likely a health/ki bar and name tag) instead of a single undifferentiated rectangle — see `phase7b_frame0_readback.png`. Currently flat white (the captured texture is white; per-vertex color variation is captured but not yet visibly coming through in render) — the next visual milestone is color, then actual character geometry (everything captured so far still reads as HUD/UI, not a 3D character mesh).
+**Result:** a real capture now renders **distinct, correctly-positioned shapes** using each draw's own real shader (a small square and an L-shaped/stepped bar — see `phase8_frame0_readback.png`), rather than a single shared look for everything. Currently near-black rather than colorful: this specific capture's real texture is a flat teal-ish color at 50% alpha, and something in its real alpha-compare/TEV logic is darkening the result — a narrower, separate bug from the shared-shader problem Phase 8 fixed, not yet investigated.
 
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
@@ -184,8 +186,12 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 
 ### What's next
 
-- Get visible color (not just shape) rendering through — captured vertex
-  colors do vary, this may just need another capture/render round
+- Root-cause why Phase 8's per-draw-shader capture renders near-black
+  instead of its real texture color (likely an alpha-compare/discard
+  condition in that state's real captured BP values)
+- Get a real interactive-combat capture through the per-draw-shader path
+  (Phase 8 was only tested against a headless/automated capture) to see
+  more varied real shading
 - Try to land on actual 3D character geometry instead of HUD/UI content
 - Once real character/effect art is actually captured: a real camera/
   projection setup, since the current bounding-box NDC normalization only
