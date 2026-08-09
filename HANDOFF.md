@@ -362,6 +362,42 @@ side effect: silences other apps like YouTube/Discord) — pass
 `--audio "No Audio Output"` to avoid this (already done in
 `scratch_launch_combat_capture.bat`).
 
+**Phase 9c, same day:** a second, longer F9-armed combat capture (211/300
+draws, 8 real shaders) rendered as one huge shape dominating the screen
+again. Root cause: `LoadRealGeometry`'s NDC normalization used ONE shared
+bounding box across every merged draw (`tests/native_render_window.cpp`)
+— correct for preserving real relative screen-space layout, but a real
+capture can mix wildly different real-world scales in one merged set, and
+one huge draw's span swamps every smaller draw down to invisibility.
+Measured: the largest draw's real vertex-space span was **72.5×** the
+smallest draw's in this capture. Fixed by normalizing each draw into its
+own NDC box independently (`DrawRange` gained `vertex_start`/`vertex_count`,
+populated in `LoadRealGeometry`; the per-draw loop replaced the old global
+min/max pass) — trades away relative real-world positioning (draws now
+visually overlap, since each independently fills roughly the same visible
+area) for actually being able to see every draw's real shape, which is
+what actually matters when hunting for a specific kind of content among
+many merged draws. Result: `phase9c_perdraw_readback.png` shows several
+distinct overlapping shapes instead of one dominating blob.
+
+That fix revealed the real reason no character mesh has shown up in either
+combat capture yet, via a quick offline analysis of the raw
+`gx_vertex_dump_phase9_combat.txt` (parsed per-draw vertex positions,
+computed each draw's x/y/z span): **every one of the 211 captured draws
+has only 3-5 vertices** — a single triangle or quad. Draws with `span_z=0`
+(zero depth variation) are flat 2D UI (health bars/icons, cycling through
+the same handful of shapes roughly every 40 draws — one UI redraw per
+frame). Draws with real nonzero depth are small VFX-scale elements (an
+aura/energy effect, growing steadily larger across a repeating draw
+cycle). A real GX character mesh is normally submitted as a much larger
+multi-triangle batch per draw call, not one triangle at a time — so no
+character geometry has been *hidden* by the shared-bbox bug, none has
+been *captured* at all yet in any session so far. Next capture attempt
+should specifically try to hold F9-armed through a longer fight or a
+specific attack animation, and/or raise `m_max_draws` (currently
+hardcoded to 300 in `MaybeEnableGxVertexDump`, `src/gpu/gx_vertex_dump.cpp`)
+so a session has more draws' worth of chances to include one.
+
 **Next steps, in likely priority order:**
 
 1. ~~Root cause found for Phase 8's near-black output — not yet fixed.~~

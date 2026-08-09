@@ -160,6 +160,8 @@ framebuffer readback, not just "no errors logged")
 
 **Phase 9b result:** the first real interactive-combat capture (F9-armed mid-fight) renders a real, differently-shaped, multi-colored element (gray/cream/pink-accented diagonal shape, consistent with a combat effect like an energy trail or hit slash — see `phase9_combat_readback.png`), confirming Phase 9's real-constants fix also holds up against genuinely varied real gameplay data, not just the one reference capture used to diagnose it.
 
+**Phase 9c**: a second, longer F9-armed combat capture (211/300 draws, 8 real shaders) rendered as one huge dominating shape again, hiding everything else — diagnosed as one draw's bounding box (real vertex-space span) being **72.5× larger** than the smallest draw's, since `LoadRealGeometry` was normalizing every merged draw into one *shared* NDC box (preserves real relative screen layout, but a huge draw's span swamps everything smaller down to invisibility). Changed to normalize each draw into its **own** NDC box instead (trades away relative real-world positioning for actually being able to see every draw's real shape — see `phase9c_perdraw_readback.png`, now showing several distinct overlapping shapes instead of one). A follow-up offline analysis of the raw capture then explained the *real* reason no character mesh has shown up yet: every one of the 211 captured draws (across both combat sessions so far) has only **3-5 vertices** — one triangle or quad — consistent with flat 2D UI (many have `span_z=0.0`, zero depth variation) or small VFX elements (auras/energy effects growing across a repeating draw cycle), not a real character mesh, which GX games typically submit as much larger multi-triangle batches per draw call. No character geometry has been *hidden*; none has been *captured* yet.
+
 **Verification method:** since nobody driving this work can watch a live
 window while it runs, every phase's proof is a framebuffer readback (backbuffer
 → CPU-readable buffer → `.ppm`/`.png` dump + pixel statistics), not just the
@@ -199,10 +201,14 @@ lib\ModernGekko\build\moderngekko-port.exe run "extracted\BudokaiTenkaichi3" --o
 - **Done in Phase 9b**: a real interactive-combat capture through the
   per-draw-shader path, now with F9 arming instead of a guessed delay.
 - Try to land on actual 3D character geometry instead of HUD/UI content
-  — Phase 9b's capture already shows a much larger, non-planar bounding
-  box than any prior capture, but the rendered element still reads as a
-  combat *effect* shape, not obviously a character mesh; capturing longer
-  fights or specific attack animations may be needed
+  — Phase 9c's per-draw analysis found every real draw captured so far
+  (across two combat sessions) has only 3-5 vertices (flat UI or small VFX
+  quads); a real character mesh is a much larger multi-triangle batch per
+  draw call, so it hasn't been *hidden* by anything, it just hasn't been
+  *captured* yet. Try a longer F9-armed session, or raise `m_max_draws`
+  (currently 300, hardcoded in `MaybeEnableGxVertexDump`) so a session has
+  more chances to include a real character draw before `Done()` cuts it
+  off.
 - Note for future capture sessions: `moderngekko-run.exe`'s default audio
   backend (WASAPI Exclusive Mode) takes exclusive control of the system
   audio device, silencing/blocking other apps (observed: YouTube, Discord)
